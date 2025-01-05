@@ -1,13 +1,12 @@
-# CARDANO BLOCKCHAIN ECOSYSTEM CONSTITUTION
+# 카르다노 블록체인 생태계 헌법
 
-## PREAMBLE
+## 서문(PREAMBLE)
 
-Cardano is a decentralized ecosystem of blockchain technology, smart contracts,
-and community governance, committed to improving economic, political, and
-social systems for everyone, everywhere.
-By offering this foundational infrastructure, Cardano empowers individuals and
-communities to manage their identity, value and governance, fostering the
-emergence of decentralized applications, businesses and network states.
+
+카르다노는 블록체인 기술, 스마트 계약, 그리고 커뮤니티 거버넌스로 이루어진 탈중앙화 생태계로서,
+전 세계 모든 이들의 경제적, 정치적 및 사회적 시스템을 개선하는 데 전념한다.
+이를 통해 카르다노는 개인과 커뮤니티가 자신의 신원, 가치를 관리하고 거버넌스를 수행할 수 있도록 지원하며,
+탈중앙화 애플리케이션, 비즈니스, 그리고 네트워크 기반 국가의 출현을 촉진하는 기반 인프라를 제공한다.
 
 Through unbiased processing of immutable data, we, the participants of the
 Cardano Community, consisting of individuals, organizations, contributors and
