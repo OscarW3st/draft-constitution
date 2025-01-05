@@ -8,28 +8,25 @@
 이를 통해 카르다노는 개인과 커뮤니티가 자신의 신원, 가치를 관리하고 거버넌스를 수행할 수 있도록 지원하며,
 탈중앙화 애플리케이션, 비즈니스, 그리고 네트워크 기반 국가의 출현을 촉진하는 기반 인프라를 제공한다.
 
-Through unbiased processing of immutable data, we, the participants of the
-Cardano Community, consisting of individuals, organizations, contributors and
-others, choose to follow in the footsteps of the early Internet and
-cryptocurrency pioneers, who first forged bonds of community through digital
-technologies.
-We are guided by our shared principles and tenets as we exercise our
-self-governance by balancing decentralized decision-making with accountability
-and safeguarding the security of the Cardano Blockchain.
+변경 불가능한 데이터를 공정하게 처리함으로써, 
+우리, 즉 개인, 조직, 기여자 및 기타로 구성된 카르다노 커뮤니티 참여자는
+디지털 기술을 통해 커뮤니티의 유대를 처음으로 형성한 초기 인터넷 및 암호화폐 개척자들의 발자취를 따르기로 선택한다.
+우리는 탈중앙화된 의사결정과 책임성의 균형을 유지하고, 
+카르다노 블록체인의 보안을 보호하며,
+자치 거버넌스를 실현하는 과정에서 공유된 원칙과 신념에 따라 행동한다.
 
-Recognizing the need for a more robust and dynamic governance framework, that
-neither relies nor depends upon traditional nation-state governance systems,
-but instead relies on self-governance by the Cardano Community, utilizing,
-wherever possible and beneficial, blockchain technology in the governance
-process, we hereby establish this Cardano Constitution to govern the Cardano
-Blockchain ecosystem, ensure the continuity of the Cardano Blockchain, and
-guard the rights of those who utilize it.
+전통적인 국가 체계에 의존하거나 이를 기반으로 하지 않으면서,
+유연하면서도 안정적인 거버넌스 체계의 필요성을 인식하고,
+카르다노 커뮤니티의 자치 거버넌스에 의존하며,
+가능한 한 이롭고 적절한 범위 내에서 블록체인 기술을 거버넌스 과정에 활용하기 위해,
+우리는 카르다노 헌법을 제정한다.
+이 헌법은 카르다노 블록체인 생태계를 통치하고, 카르다노 블록체인의 연속성을 보장하며, 
+카르다노 블록체인을 사용하는 자들의 권리를 보호하는 데 목적이 있다.
 
-With these purposes in mind, we, the Cardano Community, affirm our intention to
-abide by this Constitution in order to participate in the governance of the
-Cardano Blockchain ecosystem.
-We invite all who share our values to join us but stand not in the way of any
-who wish to take another path.
+이 목적을 달성하기 위해, 우리 카르다노 커뮤니티는 이 헌법에 따라 행동할 의사를 표명하며,
+카르다노 블록체인 생태계의 거버넌스에 참여할 의사를 밝힌다.
+우리는 우리의 가치를 공유하는 모든 이들이 동참할 것을 환영하며,
+다른 길을 선택하고자 하는 이들의 선택을 막지 않을 것이다.
 
 ## ARTICLE I. CARDANO BLOCKCHAIN TENETS AND GUARDRAILS
 
