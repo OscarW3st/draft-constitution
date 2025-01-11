@@ -28,363 +28,277 @@
 우리는 우리의 가치를 공유하는 모든 이들이 동참할 것을 환영하며,
 다른 길을 선택하고자 하는 이들의 선택을 막지 않을 것이다.
 
-## ARTICLE I. CARDANO BLOCKCHAIN TENETS AND GUARDRAILS
+## 제1장. 카르다노 블록체인의 원칙과 가드레일(CARDANO BLOCKCHAIN TENETS AND GUARDRAILS)
 
-### Section 1
+### 제1조
 
-These below Tenets shall guide all participants of the Cardano Community,
-including the Constitutional Committee, and proposed governance actions shall
-be evaluated in accordance with these Tenets.
-The order in which the below Tenets appear is not intended to represent a
-priority among Tenets.
-
-**TENET 1** Transactions on the Cardano Blockchain shall not be slowed down or
-censored and shall be expediently served for their intended purpose.
+아래의 원칙(Tenets)은 헌법 위원회(Constitutional Committee)를 포함하여, 
+카르다노 커뮤니티의 모든 참여자를 지침하며,
+제안된 거버넌스 조치는 이 원칙에 따라 평가된다.
+아래 원칙들의 나열 순서는 우선순위를 나타내는 것이 아니다.
 
-**TENET 2** The cost of transactions on the Cardano Blockchain shall be
-predictable and not unreasonable.
+**원칙 1** 카르다노 블록체인의 거래는 지연되거나 검열되지 않아야 하며,
+의도된 목적에 맞게 신속히 처리되어야 한다.
 
-**TENET 3** Anyone desiring to develop and deploy applications on the Cardano
-Blockchain shall not unreasonably be prevented from developing and deploying
-such applications as intended.
+**원칙 2** 카르다노 블록체인의 거래 비용은 예측 가능하고 
+비합리적이지 않아야 한다.
 
-**TENET 4** Contributions by the Cardano Community on the Cardano Blockchain
-shall be recognized, recorded and assessed fairly through reward sharing with
-SPOs, potential compensation to DReps and CC members, and appropriate
-tokenomics.
+**원칙 3** 카르다노 블록체인에서 애플리케이션을 개발 및 배포하려는 누구라도,
+해당 애플리케이션 개발 및 배포를 부당하게 방해받아서는 안 된다.
 
-**TENET 5** The Cardano Blockchain shall not lock in an ada owner's value or
-data without the owner's consent.
-
-**TENET 6** The Cardano Blockchain shall not unreasonably impede
-interoperability.
-
-**TENET 7** The Cardano Blockchain shall preserve in a safe manner any value
-and information stored on the Cardano Blockchain.
-
-**TENET 8** The Cardano Blockchain shall not unreasonably spend resources.
-
-**TENET 9** All users of the Cardano Blockchain shall be treated fairly and
-impartially, taking into account the collective desires of the Cardano
-Blockchain Community, consistent with the long-term sustainability and
-viability of the Cardano Blockchain.
-
-**TENET 10** Financial stability shall be maintained and the total supply of
-ada shall not exceed 45,000,000,000 (45,000,000,000,000,000 lovelace).
-
-### Section 2
-
-The Cardano Blockchain shall operate in accordance with the Guardrails for the
-Cardano Blockchain as set forth in the Cardano Blockchain Guardrails Appendix
-to this Constitution.
-The Cardano Community may from time to time digitally codify certain Guardrails
-such that the Guardrails are directly programmed and implemented on the Cardano
-Blockchain using on-chain Guardrails Scripts or built-in ledger rules.
-
-In the event there are inconsistencies between a Guardrail as set forth in the
-Cardano Blockchain Guardrails Appendix and any such Guardrail that has been
-programmed and implemented on the Cardano Blockchain, the version of such
-Guardrail that has been deployed directly on the Cardano Blockchain shall
-prevail unless and until replaced or revised pursuant to an on-chain governance
-action.
-The Constitutional Committee shall seek to reconcile such inconsistencies
-through the encouragement of an appropriate on-chain governance action.
-
-## ARTICLE II. THE CARDANO BLOCKCHAIN COMMUNITY
-
-### Section 1
-
-No formal membership shall be required to use, participate in and benefit from
-the Cardano Blockchain.
-Instead, all owners of ada, all developers of, all those building on, and all
-those otherwise supporting, maintaining or using the Cardano Blockchain are
-considered to be participants in the Cardano Community and are therefore
-recognized as beneficiaries of the Cardano Blockchain ecosystem.
-All participants in the Cardano Community are accordingly beneficiaries of this
-Constitution, entitled to its rights, privileges and protections and, as such,
-are expected to support and uphold this Constitution.
-
-### Section 2
-
-Participants in the Cardano Community who own ada are entitled to access and
-participate in the on-chain decision-making processes of the Cardano Blockchain
-ecosystem, including voting and taking part in on-chain governance actions
-regarding the Cardano Blockchain.
-
-### Section 3
-
-The Cardano Community has a responsibility to maintain the integrity of the
-Cardano Blockchain ecosystem by following this Constitution, operating the
-Cardano Blockchain, participating in Cardano Blockchain governance activities,
-and resolving disputes in a fair and transparent manner.
-
-### Section 4
-
-The Cardano Community is entitled and encouraged through the provisions of this
-Constitution to collaborate in developing, maintaining and building
-applications for the Cardano Blockchain, and to form temporary and permanent
-organizations, associations and other entities as the Cardano Community deems
-desirable or appropriate in support of the Cardano Blockchain ecosystem.
-
-## ARTICLE III. PARTICIPATORY AND DECENTRALIZED GOVERNANCE
-
-### Section 1
-
-The Cardano Blockchain shall be governed by a decentralized, on-chain
-governance model, utilizing, to the extent possible and beneficial, smart
-contracts and other blockchain based tools to facilitate decision-making and
-ensure transparency.
-On-chain voting for governance actions shall follow the process outlined in
-this Constitution, including the Cardano Blockchain Guardrails Appendix.
-On-chain governance actions shall be effected through a collective
-decision-making process, with specific consensus threshold requirements, as
-required by the Cardano Blockchain Guardrails.
-
-### Section 2
-
-Three independent governance bodies shall participate in voting for on-chain
-governance actions to provide checks and balances for the Cardano Blockchain,
-consisting of Delegated Representatives (DReps), Stake Pool Operators (SPOs)
-and the Constitutional Committee (CC).
-
-### Section 3
-
-All owners of ada shall have the right to vote in on-chain governance
-decision-making processes, as provided for in this Constitution and the Cardano
-Blockchain Guardrails Appendix.
-All owners of ada shall have the right to propose changes to the governance
-structure of the Cardano Blockchain ecosystem in accordance with the Guardrails.
-Owners of ada who use third-party custodians or other designees to hold their
-ada, may authorize or may withhold authorization for, such third-parties to
-vote on their behalf.
-
-### Section 4
-
-A special form of on-chain governance action, an "Info" action, exists to allow
-the Cardano Community to propose potential future on-chain governance actions
-and to allow community sentiment to be gauged without committing to any
-on-chain change to the Cardano Blockchain.
-Such "Info" actions have no on-chain effect other than to record such "Info"
-actions on the Cardano Blockchain.
-In accordance with Article VII Section 4, "Info" actions shall also be used in
-connection with proposed Cardano Blockchain ecosystem budgets and Cardano
-Blockchain treasury withdrawals.
-
-### Section 5
-
-In order to promote transparency in the process of on-chain governance, prior
-to being recorded or enacted on-chain, all proposed governance actions are
-expected to follow a standardized and legible format including a URL and hash
-of all documented off-chain content to the Cardano Blockchain.
-Sufficient rationale shall be provided to justify the requested change to the
-Cardano Blockchain.
-The rationale shall include, at a minimum, a title, abstract, reason for the
-proposal, and relevant supporting materials.
-
-The content of every on-chain governance action must be identical to the final
-off-chain version of the proposed action.
-
-"Hard Fork Initiation" and "Protocol Parameter Change" governance actions shall
-undergo sufficient technical review and scrutiny as mandated by the Guardrails
-to ensure that the governance action does not endanger the security,
-functionality, performance or long-term sustainability of the Cardano
-Blockchain.
-On-chain governance actions should address their expected impact on the Cardano
-Blockchain ecosystem.
-
-All owners of ada shall have the right to ensure that the process for
-participating in, submitting and voting on on-chain governance actions is open
-and transparent and is protected from undue influence and manipulation.
-
-### Section 6
-
-The Cardano Community is expected to support the creation, maintenance and
-ongoing administration of off-chain governance processes as may be necessary to
-give effect to this Constitution and to ensure that there is awareness of and
-an opportunity to debate and shape all future governance actions for the
-Cardano Blockchain.
-
-## ARTICLE IV. THE CARDANO BLOCKCHAIN ECOSYSTEM BUDGET
-
-### Section 1
-
-Any participant in the Cardano Community may propose a Cardano Blockchain
-ecosystem budget at any time.
-The Cardano Community is expected to periodically propose one or more budgets
-for the ongoing operation, maintenance and future development of the Cardano
-Blockchain ecosystem and for covering other costs related to the
-implementation, administration and maintenance of the decentralized, on-chain
-governance processes provided for in this Constitution.
-The Cardano Community may propose one aggregate budget or multiple budgets for
-the Cardano Blockchain ecosystem.
-Such budgets are expected to cover not less than a period of 73 epochs
-(approximately one calendar year) but nothing shall prevent the Cardano
-Community from proposing budgets for shorter or longer time periods.
-All owners of ada are expected to periodically approve one or more Cardano
-Blockchain ecosystem budgets through an on-chain "Info" action.
-As provided in Section 3 of this Article IV, withdrawals may be made from the
-Cardano Blockchain treasury as necessary from time to time to give effect to
-the Cardano Blockchain ecosystem budget or budgets then in effect.
-Existing budgets may be amended following the same process as provided in this
-Section 1.
-
-### Section 2
-
-Development of Cardano Blockchain ecosystem budgets and the administration of
-such budgets shall utilize, to the extent possible and beneficial, smart
-contracts and other blockchain based tools to facilitate decision-making and
-ensure transparency.
-Cardano Blockchain budgets shall specify a process for overseeing use of funds
-from Cardano Blockchain treasury withdrawals including designating one or more
-administrators who shall be responsible for such oversight.
-
-### Section 3
-
-Withdrawals from the Cardano Blockchain treasury that would cause the Cardano
-Blockchain treasury balance to violate the then applicable net change limit
-shall not be permitted.
-No withdrawals from the Cardano Blockchain treasury shall be permitted unless
-such withdrawals have been authorized and are being made pursuant to a budget
-for the Cardano Blockchain that is then in effect as required by the Cardano
-Blockchain Guardrails Appendix, and which has not been determined by the
-Constitutional Committee to be unconstitutional.
-
-### Section 4
-
-Any governance action requesting ada from the Cardano Blockchain treasury shall
-require an allocation of ada as a part of such funding request to cover the
-cost of periodic independent audits and the implementation of oversight metrics
-as to the use of such ada.
-Contractual obligations governing the use of ada received from the Cardano
-Blockchain treasury pursuant to a Cardano Blockchain ecosystem budget shall
-include dispute resolution provisions.
-
-### Section 5
-
-Any ada received from a Cardano Blockchain treasury withdrawal, so long as such
-ada is being held directly or indirectly by an administrator prior to further
-disbursement, must be kept in one or more separate accounts that can be audited
-by the Cardano Community, and such accounts shall not be delegated to an SPO but
-must be delegated to the predefined auto abstain voting option.
-
-## ARTICLE V. DELEGATED REPRESENTATIVES
-
-### Section 1
-
-In order to participate in governance actions, owners of ada may register as
-DReps and directly vote on such governance actions or may delegate their voting
-rights to other registered DReps who shall vote on their behalf.
-
-### Section 2
-
-Any owner of ada shall have the option to register as a DRep.
-Owners of ada shall be allowed to delegate their voting stake to one or more
-registered DReps, including themselves.
-DReps may be individuals or coordinated groups.
-Owners of ada who use third-party custodians or other designees to hold their
-ada, may authorize, or may withhold authorization for, such third-parties to
-delegate the voting rights of the ada owner to registered DReps on the owner's
-behalf.
-DReps are entitled to cast votes directly for on-chain governance actions and
-represent those ada owners delegating their voting rights to them.
-DRep voting thresholds are set forth in the Cardano Blockchain Guardrails
-Appendix.
-
-This voting system shall enshrine a liquid democracy model where owners of ada
-can seamlessly select among DReps, register as a DRep, and withdraw or change
-their delegation at any time.
-
-### Section 3
-
-DReps who are representing delegators are expected to periodically adopt, and
-update as they deem appropriate, codes of conduct governing their activities as
-DReps and make such codes of conduct publicly available.
-DReps are encouraged to include ethical guidelines in their codes of conduct.
-
-### Section 4
-
-The Cardano Community is expected to support the creation, maintenance and
-ongoing administration of tools to enable owners of ada to explore and evaluate
-DRep candidates, access and evaluate DRep codes of conduct and select DReps on
-such criteria as they deem relevant.
-
-### Section 5
-
-DReps who are representing delegators may be compensated for their efforts.
-DReps shall ensure that any compensation received in connection with their
-activities as a DRep is disclosed.
-
-### Section 6
-
-DReps shall not pay compensation to an ada owner or to an owner's designee in
-exchange for being appointed a DRep by such ada owner or by its designee or for
-voting on behalf of such ada owner or its designee.
-
-## ARTICLE VI. STAKE POOL OPERATORS
-
-### Section 1
-
-SPOs shall have a specific role in approving critical on-chain governance
-actions that require additional oversight and independence, voting separately
-and independently from DReps as set forth in the Cardano Blockchain Guardrails
-Appendix.
-SPOs shall participate in hard fork initiation processes as the operators of
-the nodes that participate in Cardano Blockchain's consensus mechanism.
-
-### Section 2
-
-SPOs shall act as a check on the power of the Constitutional Committee under
-exceptional circumstances by separately voting on "Motion of no confidence" and
-"Update committee/threshold and/or term" governance actions, and on
-"Parameter Update" governance actions that affect security-critical parameters
-set forth under Parameters that are Critical to the Operation of the Blockchain
-in Section 2.1 of the Cardano Blockchain Guardrails Appendix.
-
-### Section 3
-
-SPOs are encouraged to periodically adopt, and update as they deem appropriate,
-codes of conduct governing their activities as SPOs and make such codes of
-conduct publicly available.
-SPOs are encouraged to include ethical guidelines in their codes of conduct.
-
-### Section 4
-
-Owners of ada who are both SPOs and acting as DReps shall publicly disclose
-that they are participating in on-chain governance actions in both such
-capacities prior to exercising any on-chain governance rights.
-
-## ARTICLE VII. CONSTITUTIONAL COMMITTEE
-
-### Section 1
-
-A Constitutional Committee shall be established as the branch of Cardano's
-on-chain governance process that ensures governance actions to be enacted
-on-chain are consistent with this Constitution.
-The Constitutional Committee shall comprise a set of owners of ada that is
-collectively responsible for ensuring that on-chain governance actions prior to
-enactment on-chain, are constitutional.
-Except as otherwise provided in Section 4 of this Article VII, the
-Constitutional Committee shall be limited to voting on the constitutionality of
-governance actions to be enacted on-chain.
-Constitutional Committee members are expected to have appropriate expertise to
-carry out their required responsibilities, considering their past contributions
-and involvement in the Cardano Blockchain ecosystem.
-
-### Section 2
-
-The Constitutional Committee shall be composed of such number of members
-sufficient to assure the ongoing integrity of the Cardano Blockchain as
-determined from time to time by owners of ada.
-The minimum and maximum number of members of the Constitutional Committee shall
-be consistent with the minimum and maximum number of members as set forth in
-the Cardano Blockchain Guardrails Appendix.
-
-Members of the Constitutional Committee shall serve such term lengths as shall
-be determined from time to time by owners of ada as consistent with the minimum
-and maximum term lengths as set forth in the Cardano Blockchain Guardrails
-Appendix.
-To assure continuity in the operation of the Constitutional Committee, the
-terms for Constitutional Committee members shall be staggered.
+(검수필요) **원칙 4** 카르다노 커뮤니티의 기여는 공정하게 인정, 기록 및 평가되며, 
+이는 SPO(Spo Stake Pool Operators)와의 보상 공유, 
+DReps 및 헌법 위원회(CC) 구성원들에 대한 적절한 보상,
+그리고 적정한 토큰 경제 설계를 통해 이루어져야 한다.
+
+**원칙 5** 카르다노 블록체인은 소유자의 동의 없이 에이다(ADA) 소유자의 
+가치(Value) 또는 데이터를 동결하지 않아야 한다.
+
+**원칙 6** 카르다노 블록체인은 상호 운용성을 부당하게 저해하지 않아야 한다.
+
+**원칙 7** 카르다노 블록체인은 블록체인에 저장된 모든 가치(Value)와 정보를 안전하게 보존해야 한다.
+
+**원칙 8** 카르다노 블록체인은 자원을 비합리적으로 낭비하지 않아야 한다.
+
+**원칙 9** 카르다노 블록체인의 모든 사용자는 카르다노 커뮤니티의 집단적 의사를 고려하면서, 
+공정하고 공평하게 대우해야 하며, 이는 카르다노 블록체인의 장기적 지속 가능성과 실행 가능성을 준수하는 방식이어야 한다.
+
+**원칙 10** 재정적 안정성이 유지되어야 하며,
+에이다(ADA)의 총 공급량은 45,000,000,000개(45,000,000,000,000,000 lovelace)를 초과하지 않아야 한다.
+
+### 제2조
+
+카르다노 블록체인은 본 헌법의 **카르다노 블록체인 가드레일 부록**에 명시된 가드레일(Guardrails)에 따라 운영된다.
+카르다노 커뮤니티는 필요에 따라 디지털 방식으로 가드레일을 코딩하여 온체인 가드레일 스크립트(Guardrails Scripts) 또는
+내장 원장 규칙(built-in ledger rules)을 통해 이를 블록체인에 직접 프로그래밍하고 구현할 수 있다.
+
+카르다노 블록체인 가드레일 부록에 명시된 가드레일과 블록체인에 프로그래밍되고 구현된 가드레일 간에 불일치가 발생할 경우, 
+블록체인에 직접 배포된 가드레일 버전이 우선 적용된다. 이는 적절한 온체인 거버넌스 조치에 따라 대체되거나 수정될 때까지 유효하다.
+헌법 위원회는 적절한 온체인 거버넌스 조치를 독려하여 이러한 불일치를 조정하기 위해 노력한다.
+
+## 제2장. 카르다노 블록체인 커뮤니티
+
+### 제1조
+
+카르다노 블록체인을 사용하고, 참여하며, 혜택을 누리기 위해 공식적인 회원 자격은 필요하지 않다.
+대신 에이다(ADA) 소유자, 카르다노 블록체인에서 개발하거나 빌드하는 모든 개발자, 
+그리고 이를 지원, 유지하거나 사용하는 모든 이들이 카르다노 커뮤니티의 참여자로 간주되며, 
+이에 따라 카르다노 블록체인 생태계의 수혜자로 인정된다.
+카르다노 커뮤니티의 모든 참여자는 본 헌법의 수혜자로서 권리, 특권 및 보호를 받을 자격이 있으며, 
+이에 따라 본 헌법을 지원하고 준수할 의무가 있다.
+
+### 제2조
+
+에이다(ADA)를 소유한 카르다노 커뮤니티 참여자는 온체인 의사결정 과정에 접근하고 참여할 권리를 가지며, 
+카르다노 블록체인과 관련된 투표 및 온체인 거버넌스 조치에 참여할 수 있다.
+
+### 제3조
+
+카르다노 커뮤니티는 본 헌법을 준수하며, 카르다노 블록체인을 운영하고, 
+거버넌스 활동에 참여하며, 공정하고 투명한 방식으로 분쟁을 해결함으로써 
+카르다노 블록체인 생태계의 무결성을 유지할 책임이 있다.
+
+### 제4조
+
+카르다노 커뮤니티는 본 헌법의 규정을 통해 카르다노 블록체인을 위한 애플리케이션 개발, 
+유지 및 구축에 협력하며, 카르다노 블록체인 생태계를 지원하기 위해 일시적이거나 영구적인 조직, 
+협회 및 기타 단체를 구성할 권리와 권한을 가진다.
+
+## 제3장. 참여적이고 탈중앙화된 거버넌스(PARTICIPATORY AND DECENTRALIZED GOVERNANCE)
+
+### 제1조
+
+카르다노 블록체인은 탈중앙화된 온체인 거버넌스 모델에 의해 운영되며, 
+가능한 한 유익하고 적절한 범위 내에서 스마트 계약 및 
+기타 블록체인 기반 도구를 활용하여 의사결정을 촉진하고 투명성을 보장한다.
+온체인 거버넌스 조치에 대한 투표는 본 헌법 및 카르다노 블록체인 가드레일 부록에 명시된 절차를 따라야 한다.
+온체인 거버넌스 조치(On-chain governance actions)는 집단적 의사결정 과정을 통해 이루어지며, 
+카르다노 블록체인 가드레일에 명시된 특정 합의 임계값 요구사항을 충족해야 한다.
+
+### 제2조
+
+카르다노 블록체인에 대한 견제와 균형을 제공하기 위해, 
+위임자 대표(DReps), 스테이크 풀 운영자(SPOs), 그리고 헌법 위원회(CC)로 구성된 
+세 개의 독립적인 거버넌스 기관이 온체인 거버넌스 조치 투표에 참여한다.
+
+### 제3조
+
+모든 에이다(ADA) 소유자는 본 헌법 및 카르다노 블록체인 가드레일 부록에 따라 
+온체인 거버넌스 의사결정 과정에 투표할 권리를 가진다.
+모든 에이다 소유자는 카르다노 블록체인 생태계 거버넌스 구조 변경을 제안할 권리를 가지며, 
+이는 가드레일에 따라 이루어져야 한다.
+제3자 수탁인 또는 기타 지정인을 통해 에이다를 보유한 소유자는, 
+제3자가 자신의 에이다를 대신하여 투표하도록 권한을 부여하거나 이를 거부할 수 있다.
+
+### 제4조
+
+온체인 거버넌스 조치의 특별한 형태인 "정보(Info)" 조치는
+카르다노 커뮤니티가 미래의 잠재적 온체인 거버넌스 활동을 제안하고, 커뮤니티의 의견을 수렴할 수 있도록 한다.
+"정보" 조치는 카르다노 블록체인에 온체인 변경을 약속하지 않으며, 
+"정보" 활동을 블록체인에 기록하는 것 외에는 온체인에 영향을 미치지 않는다.
+제7장 제4조에 따라, "정보" 활동은 카르다노 블록체인 생태계 예산 및 
+카르다노 블록체인 재무부 인출(treasury withdrawals) 제안과 관련하여 사용되어야 한다.
+
+### 제5조
+
+온체인 거버넌스 과정의 투명성을 증진하기 위해, 
+블록체인에 기록되거나 실행되기 전에 모든 제안된 거버넌스 조치는 표준화되고 판독 가능한 형식을 따라야 하며, 
+여기에는 문서화된 오프체인 콘텐츠의 URL 및 해시가 포함되어야 한다.
+카르다노 블록체인에 대한 요청된 변경을 정당화할 수 있는 충분한 근거를 제시해야 하며,
+최소한 제목, 초록, 제안 이유 및 관련 지원 자료를 포함해야 한다.
+
+온체인 거버넌스 조치의 내용은 제안된 오프체인 버전의 최종 내용과 동일해야 한다.
+
+"하드 포크 실행(Hard Fork Initiation)" 및 
+"프로토콜 매개변수 변경(Protocol Parameter Change)" 거버넌스 조치는, 
+카르다노 블록체인의 보안, 기능, 성능 및 장기적인 지속 가능성을 위협하지 않도록 
+가드레일에서 요구하는 충분한 기술적 검토와 검증을 거쳐야 한다.
+온체인 거버넌스 조치는 카르다노 블록체인 생태계에 미칠 영향을 명확히 기술해야 한다.
+
+모든 에이다 소유자는 온체인 거버넌스 활동에 참여하고, 제안하며, 
+투표하는 과정이 개방적이고 투명하며, 부당한 영향과 조작으로부터 보호되도록 할 권리가 있습니다.
+
+### 제6조
+
+카르다노 커뮤니티는 본 헌법을 시행하고, 카르다노 블록체인의 모든 미래 거버넌스 조치에 대한 
+논의와 형성을 가능하게 하기 위해 필요에 따라 오프체인 거버넌스 프로세스의 생성, 유지 및 지속적인 관리를 지원해야 한다.
+
+## 제4장. 카르다노 블록체인 생태계 예산(THE CARDANO BLOCKCHAIN ECOSYSTEM BUDGET)
+
+### 제1조
+
+카르다노 커뮤니티의 모든 참여자는 언제든지 카르다노 블록체인 생태계 예산을 제안할 수 있다.
+카르다노 커뮤니티는 본 헌법에서 규정된 탈중앙화된 온체인 거버넌스 프로세스의 구현, 
+관리 및 유지와 관련된 기타 비용을 포함하여, 카르다노 블록체인 생태계의 지속적인 운영, 
+유지 및 향후 개발을 위해 정기적으로 하나 이상의 예산을 제안해야 한다. 
+카르다노 커뮤니티는 카르다노 블록체인 생태계를 위한 단일 통합 예산 또는 다수의 예산을 제안할 수 있다.
+이러한 예산은 최소 **73 에포크(약 1년)**의 기간을 다루어야 하지만, 더 짧거나 긴 기간의 예산을 제안하는 것을 제한하지 않는다.
+모든 에이다(ADA) 소유자는 정기적으로 온체인 "정보(Info)" 조치를 통해 하나 이상의 카르다노 블록체인 생태계 예산을 승인해야 한다.
+본 제4장의 제3조에 따라, 카르다노 블록체인 생태계 예산 또는 유효한 예산을 실행하기 위해 수시로
+카르다노 블록체인 재무부에서 재무부 인출이 이루어질 수 있다.
+기존 예산은 본 조에 명시된 동일한 절차를 따라 수정할 수 있다.
+
+### 제2조
+
+카르다노 블록체인 생태계 예산의 개발 및 관리에는 가능한 한 적절한 범위 내에서 
+스마트 계약 및 기타 블록체인 기반 도구가 활용되어 의사결정을 촉진하고 투명성을 보장해야 한다.
+카르다노 블록체인 예산은 **재무부 출금 자금 사용을 감독**하는 절차를 명시해야 하며, 
+이에는 그러한 감독에 대한 책임을 지는 하나 이상의 관리자(administrators)를 지정하는 내용이 포함되어야 한다.
+
+### 제3조
+
+카르다노 블록체인 재무부에서의 출금은 당시 적용되는 순변화 한도(net change limit) 또는
+재무부의 잔액을 초과하는 경우 허용되지 않는다.
+카르다노 블록체인 재무부에서의 출금은, 카르다노 블록체인 가드레일 부록에서 요구하는 바에 따라 
+유효한 예산에 근거하여 승인되었으며, 헌법 위원회에 의해 위헌으로 판정되지 않은 경우에만 허용된다.
+
+### 제4조
+
+카르다노 블록체인 재무부에서 에이다를 요청하는 모든 거버넌스 조치는 해당 자금 요청의 일부로, 
+주기적인 독립 감사 비용과 에이다 사용에 대한 감독 지표 구현을 위한 할당을 포함해야 한다.
+카르다노 블록체인 생태계 예산에 따라 카르다노 블록체인 재무부에서 받은 
+에이다의 사용을 규정하는 계약상 의무에는 분쟁 해결 조항이 포함되어야 한다.
+
+### 제5조
+
+카르다노 블록체인 재무부 출금을 통해 받은 모든 에이다는, 
+관리자(administrator)가 추가 배분 전에 직접 또는 간접적으로 보유하는 동안, 
+카르다노 커뮤니티가 감사할 수 있는 별도 계정에 보관되어야 하며, 해당 계정은 SPO로 위임될 수 없으며, 
+미리 정의된 자동 기권 투표 옵션(predefined auto abstain voting option)으로 위임되어야 한다.
+
+## 제5장. 위임자 대표(DELEGATED REPRESENTATIVES)
+
+### 제1조
+
+거버넌스 조치에 참여하기 위해, 에이다(ADA) 소유자는 **위임자 대표(DReps)**로 
+등록하여 직접 거버넌스 조치에 투표할 수 있으며, 
+또는 자신을 대신해 투표할 등록된 DReps에게 자신의 투표권을 위임할 수 있다.
+
+### 제2조
+
+모든 에이다 소유자는 DRep으로 등록할 선택권을 가지며,
+하나 이상의 등록된 DReps(자신 포함)에게 투표 지분을 위임할 수 있다.
+DReps는 개인 또는 협력 단체일 수 있다.
+제3자를 통해 에이다를 보유한 소유자는 제3자가 등록된 DReps에게 자신의 투표권을 위임하도록 승인하거나 이를 거부할 수 있다.
+DReps는 온체인 거버넌스 조치에 직접 투표할 권리를 가지며, 자신에게 투표권을 위임한 에이다 소유자를 대리한다.
+DRep 투표 임계값은 카르다노 블록체인 가드레일 부록에 명시된다.
+
+이 투표 시스템은 에이다 소유자가 DRep을 유연하게 선택, 등록, 위임 
+또는 변경할 수 있는 유동적 민주주의(liquid democracy) 모델을 채택한다.
+
+### 제3조
+
+위임자를 대표하는 DReps는 정기적으로 DReps로서의 활동을 규율하는 행동 강령을 채택하고, 
+필요하다고 판단되는 경우 이를 업데이트하며, 해당 행동 강령을 공개적으로 제공해야 한다.
+DReps는 행동 강령에 윤리적 지침을 포함하는 것을 권장 받는다.
+
+### 제4조
+
+카르다노 커뮤니티는 에이다 소유자가 DRep 후보자를 탐색하고, DRep의 행동 강령에 접근하고 이를 평가하며, 
+자신이 중요하다고 판단한 기준에 따라 DReps를 선택할 수 있도록 하는 도구의 생성, 
+유지 및 지속적인 관리를 지원해야 한다.
+
+### 제5조
+
+위임자를 대표하는 DReps는 자신의 활동에 대한 노력에 대해 보상을 받을 수 있다.
+DReps는 DRep으로서의 활동과 관련하여 받은 보상에 대해 공개할 의무가 있다.
+
+### 제6조
+
+DReps는 에이다 소유자나 그 대리인으로부터 DRep으로 임명되거나
+그 대리인을 대신해 투표하는 대가로 보상을 제공해서는 안 된다.
+
+## 제6장. 스테이크 풀 운영자(STAKE POOL OPERATORS)
+
+### 제1조
+
+SPO(스테이크 풀 운영자)는 카르다노 블록체인 가드레일 부록에 명시된 바에 따라 DReps와 별도로 독립적으로 투표함으로써
+추가적인 감독과 독립성을 요구하는 중요한 온체인 거버넌스 조치를 승인하는 데 있어 특정한 역할을 수행해야 한다.
+SPO는 카르다노 블록체인의 합의 메커니즘에 참여하는 노드의 운영자로서, 
+하드 포크 실행(hard fork initiation) 과정에 참여한다.
+
+### 제2조
+
+SPO(스테이크 풀 운영자)는 예외적인 상황에서 헌법 위원회의 권한을 견제하기 위해, 
+"불신임 결의(Motion of no confidence)", "위원회/임계값 및 임기 수정(Update committee/threshold and/or term)" 
+거버넌스 조치에 대해 독립적으로 투표해야 하며, 
+카르다노 블록체인 가드레일 부록 제2.1조에 명시된 블록체인 운영 및 보안에 
+중대한 영향을 줄 수 있는 주요 프로토콜 매개변수(Critical Protocol Parameters)에 대한
+"매개변수 수정(Parameter Update)" 거버넌스 조치에도 독립적으로 투표해야 한다.
+
+### 제3조
+
+SPO는 정기적으로, 필요하다고 판단될 경우 자신들의 활동을 규율하는 행동 강령을 채택하고 업데이트하며, 
+해당 행동 강령을 공개적으로 제공할 것이 권장된다.
+또한, SPO는 행동 강령에 윤리적 지침을 포함할 것이 권장된다.
+
+### 제4조
+
+에이다(ADA) 소유자로서 SPO와 DRep 역할을 동시에 수행하는 자는 온체인 거버넌스 권한을 행사하기 전에, 
+이 두 역할을 동시에 수행하고 있음을 공개적으로 밝힐 의무가 있다.
+
+## 제7장. 헌법 위원회(CONSTITUTIONAL COMMITTEE)
+
+### 제1조
+
+헌법 위원회는 카르다노의 온체인 거버넌스 프로세스의 일부로, 
+온체인에서 시행될 거버넌스 조치가 본 헌법에 부합하는지 확인하는 역할을 수행하기 위해 설립된다.
+헌법 위원회는 에이다(ADA) 소유자 집단으로 구성되며, 
+온체인에서 시행되기 전의 거버넌스 조치가 헌법에 부합하도록 보장할 공동 책임을 진다.
+본 제7장의 제4조에서 달리 명시되지 않는 한, 
+헌법 위원회의 권한은 온체인에서 시행될 거버넌스 조치의 합헌성을 판단하는 투표로 제한된다.
+헌법 위원회 구성원은 카르다노 블록체인 생태계에 대한 과거 기여와 참여를 고려하여, 
+그들이 요구된 책임을 수행하기 위한 적절한 전문성을 갖추고 있어야 한다.
+
+### 제2조
+
+헌법 위원회는 카르다노 블록체인의 지속적인 무결성을 보장하기에 충분한 수의 위원으로 구성되어야 하며, 
+이는 에이다 소유자가 수시로 결정한다.
+헌법 위원회의 최소 및 최대 위원 수는 카르다노 블록체인 가드레일 부록에 명시된 최소 및 최대 위원 수와 일치해야 한다
+
+헌법 위원회의 임기는 카르다노 블록체인 가드레일 부록에 명시된 최소 및 최대 임기 기간을 준수해야 하며,
+이는 에이다 소유자가 수시로 결정한다.
+헌법 위원회의 운영 지속성을 보장하기 위해, 위원의 임기는 순차적으로 교체되는 방식(staggered)으로 설정되어야 한다.
 
 ### Section 3
 
