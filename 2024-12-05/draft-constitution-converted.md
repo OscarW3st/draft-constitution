@@ -530,175 +530,162 @@ SPO는 정기적으로, 필요하다고 판단될 경우 자신들의 활동을 
 
 가드레일은 서로 중복될 수 있으며 중복되는 경우, 가장 제한적인 가드레일 세트가 적용된다.
 
-Where a parameter is not explicitly listed in this document, then the Guardrail
-Script **must not** permit any changes to the parameter.
+이 문서에 매개변수가 명시적으로 나열되어 있지 않은 경우, 
+스크립트는 해당 매개변수에 대한 변경을 허용해서는 안 된다(Must not).
 
-Conversely, where a parameter is explicitly listed in this document but no
-checkable Guardrails are specified, the Guardrail Script **must not** impose
-any constraints on changes to the parameter.
+반대로, 문서에 명시된 매개변수라도 검증 가능한 가드레일이 명시되지 않은 경우, 
+가드레일 스크립트는 해당 매개변수 변경에 대해 어떠한 제약도 부과해서는 안 된다(Must not).
 
-### 2. Guardrails and Guidelines on Protocol Parameter Update Actions
+### 2. 프로토콜 매개변수 업데이트 조치에 대한 가드레일 및 지침(Guardrails and Guidelines on Protocol Parameter Update Actions)
 
-Below are Guardrails and guidelines for changing updatable protocol parameter
-settings via the protocol parameter update governance action such that the
-Cardano Blockchain is never in an unrecoverable state as a result of such
-changes.
+다음은 프로토콜 매개변수 업데이트 거버넌스 조치를 통해 업데이트 가능한 프로토콜 매개변수 설정을 변경할 때,
+이러한 변경으로 인해 카르다노 블록체인이 복구 불가능한 상태가 되지 않도록 하는 가드레일과 지침이다.  
 
-Note that, to avoid ambiguity, this Appendix uses the parameter name that is
-used in protocol parameter update governance actions rather than any other
-convention.
+모호함을 방지하기 위해, 본 부록에서는 프로토콜 매개변수 업데이트 거버넌스 조치에서 사용되는 매개변수 이름을 사용하며, 
+다른 관례는 따르지 않는다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-PARAM-01 (y) Any protocol parameter that is not explicitly named in this
-document **must not** be changed by a Parameter update governance action
+PARAM-01 (y) 이 문서에 명시되지 않은 모든 프로토콜 매개변수는 매개변수 
+업데이트 거버넌스 조치에 의해 변경되어서는 **안 된다(Must not)**.
 
-PARAM-02a (y) Where a protocol parameter is explicitly listed in this document
-but no checkable Guardrails are specified, the Guardrails Script **must not**
-impose any constraints on changes to the parameter.
-Checkable Guardrails are shown by a (y)
+PARAM-02a (y) 이 문서에 명시된 프로토콜 매개변수에 대해 검증 가능한 가드레일이 명시되지 않은 경우, 
+가드레일 스크립트는 해당 매개변수 변경에 대해 어떠한 제약도 부과해서는 **안 된다(Must not)**.
+검증 가능한 가드레일은 **(y)로** 표시된다.
 
-### 2.1. Critical Protocol Parameters
+### 2.1. 주요 프로토콜 매개변수(Critical Protocol Parameters)
 
-The below protocol parameters are critical from a security point of view.
+아래의 프로토콜 매개변수는 보안 측면에서 중요하다.
 
-#### Parameters that are Critical to the Operation of the Blockchain
+#### 블록체인 운영에 중요한 매개변수(Parameters that are Critical to the Operation of the Blockchain)
 
-- *maximum block body size* (*maxBlockBodySize*)
+- *최대 블록 본문 크기* (*maxBlockBodySize*)
 
-- *maximum transaction size* (*maxTxSize*)
+- *최대 트랜잭션 크기* (*maxTxSize*)
 
-- *maximum block header size* (*maxBlockHeaderSize*)
+- *최대 블록 헤더 크기* (*maxBlockHeaderSize*)
 
-- *maximum size of a serialized asset value* (*maxValueSize*)
+- *직렬화된 자산 값의 최대 크기* (*maxValueSize*)
 
-- *maximum script execution/memory units in a single block*
+- *단일 블록에서의 최대 스크립트 실행/메모리 단위*
 (*maxBlockExecutionUnits[steps/memory]*)
 
-- *minimum fee coefficient* (*txFeePerByte*)
+- *최소 수수료 계수* (*txFeePerByte*)
 
-- *minimum fee constant* (*txFeeFixed*)
+- *최소 수수료 상수* (*txFeeFixed*)
 
-- *minimum fee per byte for reference scripts* (*minFeeRefScriptCoinsPerByte*)
+- *참조 스크립트의 바이트당 최소 수수료* (*minFeeRefScriptCoinsPerByte*)
 
-- *minimum lovelace deposit per byte of serialized UTxO* (*utxoCostPerByte*)
+- *직렬화된 UTxO 바이트당 최소 lovelace 예치금 * (*utxoCostPerByte*)
 
-- *governance action deposit* (*govDeposit*)
+- *거버넌스 조치 예치금* (*govDeposit*)
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-PARAM-03a (y) Critical protocol parameters require an SPO vote in addition to a
-DRep vote: SPOs **must** say "yes" with a collective support of more than 50%
-of all active block production stake.
-This is enforced by the Guardrails on the stake pool voting threshold.
+PARAM-03a (y) 주요 프로토콜 매개변수(Critical protocol parameters)는 DRep 투표 외에 SPO 투표도 필요하다. 
+SPO들은 전체 활성 블록 생성 지분(active block production stake)의 
+50% 이상의 집단적 지지를 통해 **"예"**라고 투표해야 **한다(Must).**
+이 기준은 스테이크풀 투표 임계값에 대한 가드레일(Guardrails on the stake pool voting threshold)에 의해 강제된다.
 
-PARAM-04a (x) At least 3 months **should** normally pass between the
-publication of an off-chain proposal to change a critical protocol parameter
-and the submission of the corresponding on-chain governance action.
-This Guardrail may be relaxed in the event of a Severity 1 or Severity 2
-network issue following careful technical discussion and evaluation.
+PARAM-04a (x) 주요 프로토콜 매개변수를 변경하기 위한 오프체인 제안이 발표된 후, 
+해당하는 온체인 거버넌스 조치 제출 간에는 통상적으로 최소 3개월이 경과해야 **한다(Should)**.
+다만, 중대성 1 또는 중대성 2의 네트워크 문제가 발생한 경우, 신중한 기술적 논의와 평가를 거쳐 이 가드레일이 완화될 수 있다.
 
-#### Parameters that are Critical to the Governance System
+#### 거버넌스 시스템에 중요한 매개변수(Parameters that are Critical to the Governance System)
 
-- *delegation key lovelace deposit* (*stakeAddressDeposit*)
+- *위임 키 lovelace 예치금* (*stakeAddressDeposit*)
 
-- *pool registration lovelace deposit* (*stakePoolDeposit*)
+- *풀 등록 lovelace 예치금* (*stakePoolDeposit*)
 
-- *minimum fixed rewards cut for pools* (*minPoolCost*)
+- *풀에 대한 최소 고정 보상 비율* (*minPoolCost*)
 
-- *DRep deposit amount* (*dRepDeposit*)
+- *DRep 예치금 금액* (*dRepDeposit*)
 
-- *minimal Constitutional Committee size* (*committeeMinSize*)
+- *헌법위원회 최소 규모* (*committeeMinSize*)
 
-- *maximum term length (in epochs) for the Constitutional Committee members*
+- *헌법위원회 위원의 최대 임기(에포크 단위)*
 (*committeeMaxTermLength*)
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-PARAM-05a (y) DReps **must** vote "yes" with a collective support of more than
-50% of all active voting stake.
-This is enforced by the Guardrails on the DRep voting thresholds.
+PARAM-05a (y) DRep은 전체 활성 투표 지분의 50% 이상의 집단적 지지를 통해 “예”라고 투표해야 **한다(Must).** 
+이는 DRep 투표 임계값에 대한 가드레일(Guardrails on the DRep voting thresholds)에 의해 강제된다.
 
-PARAM-06a (x) At least 3 months **should** normally pass between the
-publication of an off-chain proposal to change a parameter that is critical to
-the governance system and the submission of the corresponding on-chain
-governance action.
-This Guardrail may be relaxed in the event of a Severity 1 or Severity 2
-network issue following careful technical discussion and evaluation.
+PARAM-06a (x) 거버넌스 시스템에 중요한 매개변수를 변경하기 위한 오프체인 제안이 발표된 후, 
+해당하는 온체인 거버넌스 조치 제출 간에는 통상적으로 최소 3개월이 경과해야 **한다(Should)**.
+다만, 중대성 1 또는 중대성 2의 네트워크 문제가 발생한 경우, 신중한 기술적 논의와 평가를 거쳐 이 가드레일이 완화될 수 있다.
 
-### 2.2. Economic Parameters
+### 2.2. 경제 매개변수(Economic Parameters)
 
-The overall goals when managing economic parameters are to:
+경제 매개변수를 관리할 때의 전반적인 목표는 다음과 같다:
 
-1. Enable long-term economic sustainability for the Cardano Blockchain;
+1. 카르다노 블록체인의 장기적인 경제적 지속 가능성을 가능하게 한다;
 
-2. Ensure that stake pools are adequately rewarded for maintaining the
-Cardano Blockchain;
+2. 카르다노 블록체인을 유지하는 스테이크 풀들이 적절한 보상을 받을 수 있도록 한다;
 
-3. Ensure that ada owners are adequately rewarded for using stake in
-constructive ways, including when delegating ada for block production; and
+3. 블록 생성을 위해 에이다를 위임하는 경우를 포함하여, 
+에이다 소유자가 지분을 생산적인 방식으로 사용할 경우 적절한 보상을 받을 수 있도록 보장한다; 그리고
 
-4. Balance economic incentives for different Cardano Blockchain ecosystem
-stakeholders, including but not limited to Stake Pool Operators, ada owners,
-DeFi users, infrastructure users, developers (e.g. DApps) and financial
-intermediaries (e.g. exchanges)
+4. 스테이크 풀 운영자, 에이다 소유자, DeFi 사용자, 인프라 사용자, 개발자(예: DApp),
+금융 중개자(예: 거래소)를 포함하되 이에 국한되지 않는 다양한 카르다노 블록체인 생태계
+이해관계자를 위한 경제적 인센티브의 균형을 유지한다.
 
-#### Triggers for Change
+#### 변경의 촉발 요인(Triggers for Change)
 
-1. Significant changes in the fiat value of ada resulting in potential problems
-with security, performance, functionality or long-term sustainability
+1. 에이다 법정화폐 가치의 큰 변화로 인해 보안, 성능, 기능
+또는 장기적인 지속 가능성에 잠재적인 문제가 발생할 가능성이 있는 경우
 
-2. Changes in transaction volumes or types
+2. 트랜잭션 볼륨 또는 유형의 변화
 
-3. Community requests or suggestions
+3. 커뮤니티의 요청이나 제안
 
-4. Emergency situations that require changes to economic parameters
+4. 경제 매개변수의 변경이 필요한 긴급 상황
 
-#### Counter-indicators
+#### 대응 지표(Counter-indicators)
 
-Changes to the economic parameters should not be made in isolation.
-They need to account for:
+경제 매개변수의 변경은 단독으로 이루어져서는 안 된다.
+다음 요소들을 고려해야 한다:
 
-- External economic factors
+- 외부 경제적 요인(External economic factors)
 
-- Network security concerns
+- 네트워크 보안 문제(Network security concerns)
 
-#### Core Metrics
+#### 핵심 지표(Core Metrics)
 
-- Fiat value of ada resulting in potential problems with security, performance,
-functionality or long-term sustainability
+- 에이다의 법정화폐 가치로 인해 보안, 성능, 기능
+또는 장기적인 지속 가능성에 잠재적인 문제가 발생하는 경우
 
-- Transaction volumes and types
+- 트랜잭션 볼륨과 유형(Transaction volumes and types)
 
-- Number and health of stake pools
+- 스테이크 풀의 수와 건전성(Number and health of stake pools)
 
-- External economic factors
+- 외부 경제적 요인(External economic factors)
 
-#### Changes to Specific Economic Parameters
+#### 특정 경제 매개변수 변경(Changes to Specific Economic Parameters)
 
-Transaction fee per byte (txFeePerByte) and fixed transaction fee (txFeeFixed)
+트랜잭션 바이트당 수수료 (txFeePerByte) 및 고정 트랜잭션 수수료 (txFeeFixed)
 
-Defines the cost for basic transactions in lovelace:
+lovelace 단위로 기본 트랜잭션 비용을 계산한다:
 
 *fee(tx) = txFeeFixed + txFeePerByte x nBytes(tx)*
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-TFPB-01 (y) *txFeePerByte* **must not** be lower than 30 (0.000030 ada) This
-protects against low-cost denial of service attacks
+TFPB-01 (y) *txFeePerByte*는 **30(0.000030 에이다)** 보다 낮아서는 **안 된다(must not).**
+이 매개변수는 저비용 서비스 거부 공격(denial-of-service attacks)을 방지하기 위함이다.
 
-TFPB-02 (y) *txFeePerByte* **must not** exceed 1,000 (0.001 ada) This ensures
-that transactions can be paid for
+TFPB-02 (y) *txFeePerByte*는 **1,000(0.001 에이다)** 를 초과해서는 **안 된다(must not).**
+이 매개변수는 트랜잭션 비용을 지불할 수 있도록 보장하기 위함이다.
 
-TFPB-03 (y) *txFeePerByte* **must not** be negative
+TFPB-03 (y) *txFeePerByte*는 음수여서는 **안 된다(must not).**
 
-TFF-01 (y) *txFeeFixed* **must not** be lower than 100,000 (0.1 ada) This
-protects against low-cost denial of service attacks
+TFF-01 (y) *txFeeFixed*는 **100,000(0.1 에이다)**보다 낮아서는 **안 된다(must not).**
+이 매개변수는 저비용 서비스 거부 공격을 방지하기 위함이다.
 
-TFF-02 (y) *txFeeFixed* **must not** exceed 10,000,000 (10 ada) This ensures
-that transactions can be paid for
+TFF-02 (y) *txFeeFixed*는 **10,000,000(10 에이다)**를 초과해서는 **안 된다(must not).**
+이 매개변수는 트랜잭션 비용을 지불할 수 있도록 보장하기 위함이다.
 
-TFF-03 (y) *txFeeFixed* **must not** be negative
+TFF-03 (y) *txFeeFixed*는 음수여서는 **안 된다(must not).**
 
 TFGEN-01 (x - "should") To maintain a consistent level of protection agains
 denial-of-service attacks, *txFeeFixed* and *txFeeFixed* **should** be adjusted
