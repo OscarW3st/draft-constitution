@@ -32,7 +32,7 @@
 
 ### 제1조
 
-아래의 원칙(Tenets)은 헌법 위원회(Constitutional Committee)를 포함하여, 
+아래의 원칙(Tenets)은 헌법위원회(Constitutional Committee)를 포함하여, 
 카르다노 커뮤니티의 모든 참여자를 지침하며,
 제안된 거버넌스 조치는 이 원칙에 따라 평가된다.
 아래 원칙들의 나열 순서는 우선순위를 나타내는 것이 아니다.
@@ -48,7 +48,7 @@
 
 (검수필요) **원칙 4** 카르다노 커뮤니티의 기여는 공정하게 인정, 기록 및 평가되며, 
 이는 SPO(Spo Stake Pool Operators)와의 보상 공유, 
-DReps 및 헌법 위원회(CC) 구성원들에 대한 적절한 보상,
+DReps 및 헌법위원회(CC) 구성원들에 대한 적절한 보상,
 그리고 적정한 토큰 경제 설계를 통해 이루어져야 한다.
 
 **원칙 5** 카르다노 블록체인은 소유자의 동의 없이 에이다(ADA) 소유자의 
@@ -74,7 +74,7 @@ DReps 및 헌법 위원회(CC) 구성원들에 대한 적절한 보상,
 
 카르다노 블록체인 가드레일 부록에 명시된 가드레일과 블록체인에 프로그래밍되고 구현된 가드레일 간에 불일치가 발생할 경우, 
 블록체인에 직접 배포된 가드레일 버전이 우선 적용된다. 이는 적절한 온체인 거버넌스 조치에 따라 대체되거나 수정될 때까지 유효하다.
-헌법 위원회는 적절한 온체인 거버넌스 조치를 독려하여 이러한 불일치를 조정하기 위해 노력한다.
+헌법위원회는 적절한 온체인 거버넌스 조치를 독려하여 이러한 불일치를 조정하기 위해 노력한다.
 
 ## 제2장. 카르다노 블록체인 커뮤니티
 
@@ -118,7 +118,7 @@ DReps 및 헌법 위원회(CC) 구성원들에 대한 적절한 보상,
 ### 제2조
 
 카르다노 블록체인에 대한 견제와 균형을 제공하기 위해, 
-위임자 대표(DReps), 스테이크 풀 운영자(SPOs), 그리고 헌법 위원회(CC)로 구성된 
+위임자 대표(DReps), 스테이크 풀 운영자(SPOs), 그리고 헌법위원회(CC)로 구성된 
 세 개의 독립적인 거버넌스 기관이 온체인 거버넌스 조치 투표에 참여한다.
 
 ### 제3조
@@ -190,7 +190,7 @@ DReps 및 헌법 위원회(CC) 구성원들에 대한 적절한 보상,
 카르다노 블록체인 재무부에서의 출금은 당시 적용되는 순변화 한도(net change limit) 또는
 재무부의 잔액을 초과하는 경우 허용되지 않는다.
 카르다노 블록체인 재무부에서의 출금은, 카르다노 블록체인 가드레일 부록에서 요구하는 바에 따라 
-유효한 예산에 근거하여 승인되었으며, 헌법 위원회에 의해 위헌으로 판정되지 않은 경우에만 허용된다.
+유효한 예산에 근거하여 승인되었으며, 헌법위원회에 의해 위헌으로 판정되지 않은 경우에만 허용된다.
 
 ### 제4조
 
@@ -259,7 +259,7 @@ SPO는 카르다노 블록체인의 합의 메커니즘에 참여하는 노드�
 
 ### 제2조
 
-SPO(스테이크 풀 운영자)는 예외적인 상황에서 헌법 위원회의 권한을 견제하기 위해, 
+SPO(스테이크 풀 운영자)는 예외적인 상황에서 헌법위원회의 권한을 견제하기 위해, 
 "불신임 결의(Motion of no confidence)", "위원회/임계값 및 임기 수정(Update committee/threshold and/or term)" 
 거버넌스 조치에 대해 독립적으로 투표해야 하며, 
 카르다노 블록체인 가드레일 부록 제2.1조에 명시된 블록체인 운영 및 보안에 
@@ -277,333 +277,258 @@ SPO는 정기적으로, 필요하다고 판단될 경우 자신들의 활동을 
 에이다(ADA) 소유자로서 SPO와 DRep 역할을 동시에 수행하는 자는 온체인 거버넌스 권한을 행사하기 전에, 
 이 두 역할을 동시에 수행하고 있음을 공개적으로 밝힐 의무가 있다.
 
-## 제7장. 헌법 위원회(CONSTITUTIONAL COMMITTEE)
+## 제7장. 헌법위원회(CONSTITUTIONAL COMMITTEE)
 
 ### 제1조
 
-헌법 위원회는 카르다노의 온체인 거버넌스 프로세스의 일부로, 
+헌법위원회는 카르다노의 온체인 거버넌스 프로세스의 일부로, 
 온체인에서 시행될 거버넌스 조치가 본 헌법에 부합하는지 확인하는 역할을 수행하기 위해 설립된다.
-헌법 위원회는 에이다(ADA) 소유자 집단으로 구성되며, 
+헌법위원회는 에이다(ADA) 소유자 집단으로 구성되며, 
 온체인에서 시행되기 전의 거버넌스 조치가 헌법에 부합하도록 보장할 공동 책임을 진다.
 본 제7장의 제4조에서 달리 명시되지 않는 한, 
-헌법 위원회의 권한은 온체인에서 시행될 거버넌스 조치의 합헌성을 판단하는 투표로 제한된다.
-헌법 위원회 구성원은 카르다노 블록체인 생태계에 대한 과거 기여와 참여를 고려하여, 
+헌법위원회의 권한은 온체인에서 시행될 거버넌스 조치의 합헌성을 판단하는 투표로 제한된다.
+헌법위원회 구성원은 카르다노 블록체인 생태계에 대한 과거 기여와 참여를 고려하여, 
 그들이 요구된 책임을 수행하기 위한 적절한 전문성을 갖추고 있어야 한다.
 
 ### 제2조
 
-헌법 위원회는 카르다노 블록체인의 지속적인 무결성을 보장하기에 충분한 수의 위원으로 구성되어야 하며, 
+헌법위원회는 카르다노 블록체인의 지속적인 무결성을 보장하기에 충분한 수의 위원으로 구성되어야 하며, 
 이는 에이다 소유자가 수시로 결정한다.
-헌법 위원회의 최소 및 최대 위원 수는 카르다노 블록체인 가드레일 부록에 명시된 최소 및 최대 위원 수와 일치해야 한다
+헌법위원회의 최소 및 최대 위원 수는 카르다노 블록체인 가드레일 부록에 명시된 최소 및 최대 위원 수와 일치해야 한다
 
-헌법 위원회의 임기는 카르다노 블록체인 가드레일 부록에 명시된 최소 및 최대 임기 기간을 준수해야 하며,
+헌법위원회의 임기는 카르다노 블록체인 가드레일 부록에 명시된 최소 및 최대 임기 기간을 준수해야 하며,
 이는 에이다 소유자가 수시로 결정한다.
-헌법 위원회의 운영 지속성을 보장하기 위해, 위원의 임기는 순차적으로 교체되는 방식(staggered)으로 설정되어야 한다.
+헌법위원회의 운영 지속성을 보장하기 위해, 위원의 임기는 순차적으로 교체되는 방식(staggered)으로 설정되어야 한다.
+
+### 제3조
+
+카르다노 커뮤니티는 가드레일의 요구 사항에 부합하는 
+헌법 위원회 위원 선출 절차를 수시로 수립하고 공개해야 한다.
+
+### 제4조
+
+“불신임 결의(Motion of no confidence)” 또는 
+"위원회/임계값 및 임기 수정(Update committee/threshold and/or term)"을 제외한 어떠한 거버넌스 조치도 
+가드레일에 명시된 헌법위원회 위원 중 일정 비율 이상이 해당 제안이 이 헌법을 위반하지 않는다는 것을 
+온체인 조치를 통해 먼저 확인한 경우가 아니라면 온체인에서 실행될 수 없다.
+각 헌법위원회 위원은 한 표의 투표권을 가진다.
+
+“정보(Info)” 조치는 온체인 효과가 없기 때문에 합헌성을 평가할 수 없으며, 
+따라서 헌법위원회 위원들은 ‘정보’ 조치가 온체인에 기록되는 것을 제한할 수 없다.
+그러나 헌법위원회 구성원은 해당 "정보" 조치가 온체인 메커니즘에 의해 실행될 경우 
+위헌으로 간주될지 여부에 대한 의견을 표명하기 위해 "정보" 조치에 대해 온체인 투표를 기록할 수 있다.
+
+카르다노 블록체인 생태계 예산을 제안하는 "정보" 조치의 경우, 
+헌법위원회 구성원은 해당 예산 제안이 "정보" 조치에 명시된 형태로 실행될 경우 
+헌법을 위반하는지 여부에 대한 의견을 온체인에 기록해야 한다.
+
+이미 승인된 예산에 따라 카르다노 블록체인 재무부에서의 출금을 제안하는 "정보" 조치의 경우, 
+헌법위원회 구성원은 해당 출금이 헌법을 위반하는지 여부에 대한 의견을 온체인에 기록해야 한다.
+
+### 제5조
+
+헌법위원회는 항상 다음 두 가지 상태 중 하나에 속한다:
+신뢰 상태(state of confidence) 또는 불신임 상태(state of no-confidence). 
+불신임 상태에 있는 경우, 해당 헌법위원회의 위원들은 
+"헌법 위원회/임계값 수정(Update committee/threshold)" 거버넌스 조치를 통해 교체되기 전까지, 
+"정보" 조치를 제외한 어떠한 온체인 거버넌스 조치도 진행할 수 없다.
+불신임 상태에서는 예산 제안 또는 재무부 인출 제안과 관련된 “정보” 조치 이외의 
+“정보” 조치는 계속 온체인에 기록될 수 있다.
+
+헌법위원회의 위원이 본 헌법에서 요구된 책임을 수행하지 않는다고 판단된 경우, 
+가드레일에 명시된 SPO와 DReps의 필요 비율에 따라 각각 
+"헌법위원회/임계값 및/또는 임기 수정(Update Constitutional Committee/threshold and/orterm)" 
+거버넌스 조치에 투표하여 결정한다. 
+이러한 거버넌스 조치가 시행되면, 해당 위원은 헌법위원회에서 해임된다. 
+이후, 해임된 위원을 대체하기 위한 선거는 가능한 한 신속히 시행되어야 한다.
+
+모든 헌법위원회를 동시에 해임하는 "불신임 결의(Motion of no confidence)" 
+거버넌스 조치가 SPO와 DReps의 필요 비율로 승인된 경우, 
+해당 거버넌스 조치가 시행된 이후 헌법위원회는 불신임 상태(state of no-confidence)로 간주된다. 
+이후, 기존 헌법위원회 구성원 전체 또는 일부를 재선임하거나 새로운 헌법위원회 구성원을 선출하기 
+위한 선거가 시행될 때까지 불신임 상태가 유지된다.
+
+### 제6조
+
+헌법위원회의 절차는 투명해야 한다. 헌법위원회는 모든 결정을 공개적으로 발표해야 한다. 
+특정 거버넌스 조치에 대해 헌법위원회가 집단적으로 위헌이라고 판단했거나, 개별 구성원이 위헌이라고 판단한 경우, 
+해당 판단의 근거를 명시해야 하며, 본 헌법의 특정 조항 또는 카르다노 블록체인 가드레일 부록의 충돌 조항을 참조해야 한다. 
+그러나 헌법 위원회 구성원 간의 내부 논의는 공개적으로 공개할 필요는 없다.
+
+헌법 위원회는 정기적으로 행동 강령을 채택하고 이를 발표하며, 
+행동 강령에는 윤리적 지침을 포함하는 것이 권장된다. 또한, 
+헌법 위원회는 필요하다고 판단되는 정책과 절차를 정기적으로 채택하고 이를 발표해야 한다.
+
+### 제7조
+
+카르다노 커뮤니티는 헌법 위원회가 필요한 기능을 수행할 수 있도록 필요한 도구의 생성, 
+유지 및 지속적인 관리를 지원해야 한다.
+
+### 제8조
+
+헌법 위원회 구성원은 헌법 위원회 활동과 관련된 노력에 대해 보상을 받을 수 있다. 
+헌법 위원회 구성원은 자신들의 활동과 관련하여 받은 보상을 공개해야 한다. 
+카르다노 블록체인 생태계 예산은 헌법위원회 구성원에 대한 보상을 포함할 수 있으며, 
+해당 보상 금액은 에이다 보유자들에 의해 수시로 승인된 금액에 따라 카르다노 블록체인 재무부로부터 배정될 수 있다. 
+카르다노 블록체인 생태계 예산은 헌법위원회의 주기적인 행정 비용을 충당하기 위해 
+헌법위원회가 수시로 요청하고 에이다 보유자들에 의해 승인된 금액을 포함해야 한다.
+
+### 제9조
+
+헌법위원회 구성원이 동시에 DRep 또는 SPO로 활동하거나 둘 다의 역할을 수행하는 경우, 
+이들은 온체인 거버넌스 조치와 관련하여 투표하기 전에 자신이 복수의 역할로 
+온체인 거버넌스 조치에 참여하고 있음을 공개적으로 고지해야 한다.
+
+## 제8장. 개정 절차(AMENDMENT PROCESS)
+
+### 제1조
+
+이 헌법은 생동하는 문서(living document)로 취급되어야 한다.
+기술적 발전, 카르다노 커뮤니티의 욕구, 필요 및 기대의 변화, 
+그리고 예기치 못한 상황들은 향후 이 헌법을 개정할 필요성을 야기할 수 있다.
+카르다노 커뮤니티는 주기적으로 이 헌법의 조항을 검토하고 논의할 것을 권장하며, 
+필요할 경우 카르다노 커뮤니티가 적절하다고 판단하는 포럼에서 모여 이 헌법의 개정을 제안할 수 있다.
+개정은 본 제8장에서 규정된 절차에 따라 이루어질 수 있다.
+
+### 제2조
+
+카르다노 블록체인 가드레일 부록에서 별도로 규정된 경우를 제외하고, 
+이 헌법 및 카르다노 블록체인 가드레일 부록에 대한 개정은 집단적 의사결정 과정을 통해 승인되어야 하며, 
+이는 현재 활성화된 투표 지분의 최소 65% 이상의 임계값을 충족하는 온체인 거버넌스 조치를 요구한다.
 
 ### Section 3
 
-The Cardano Community shall establish and make public a process from time to
-time for election of members of the Constitutional Committee consistent with
-the requirements of the Guardrails.
+카르다노 블록체인 가드레일 부록이 특정 가드레일에 대해 
+본 제8장 제2조에서 규정한 임계값과 다른 개정 임계값을 명시한 경우, 
+해당 가드레일에 대해서는 카르다노 블록체인 가드레일 부록에 명시된 임계값이 적용된다.
 
-### Section 4
+## 부록 I: 카르다노 블록체인 가드레일(CARDANO BLOCKCHAIN GUARDRAILS)
 
-No governance action, other than a "Motion of no confidence," or "Update
-Constitutional Committee/threshold and/or term" may be implemented on-chain
-unless a requisite percentage of the members of the Constitutional Committee as
-specified by the Guardrails shall have first determined and affirmed through an
-on-chain action that such proposal does not violate this Constitution.
-Each Constitutional Committee member shall have one vote.
+### 1. 서론
 
-Because "Info" actions have no on-chain effect and, accordingly, are neither
-constitutional nor unconstitutional, Constitutional Committee members may not
-prevent "Info" actions from being recorded on-chain.
-Members of the Constitutional Committee may nevertheless record a vote on-chain
-regarding an "Info" action in order to express their view on such "Info"
-action, including whether the suggested course of action proposed in such
-"Info" action, would be, in the view of such member, unconstitutional if it
-were to be enforced by on-chain mechanisms.
+카르다노 블록체인의 온체인 거버넌스를 구현하기 위해, 
+카르다노 블록체인이 안전하고 지속 가능한 방식으로 운영될 수 있도록 합리적인 가드레일을 수립할 필요가 있다.
 
-In the case of "Info" actions that propose a Cardano Blockchain ecosystem
-budget, Constitutional Committee members shall record a vote on-chain that sets
-forth their opinion as to whether the proposed budget, if it were to be
-implemented in the form contained in the "Info" action, would violate this
-Constitution.
+본 부록은 카르다노 블록체인의 온체인 거버넌스 조치에 적용되어야 할 가드레일을 명시한다. 
+여기에는 프로토콜 매개변수의 변경 및 재무부 인출 한도의 제한이 포함된다.
+이 가드레일은 설정의 필수적이고 본질적인 제한과 경험, 
+측정 및 거버넌스 목표에 기반한 권장 사항을 모두 다룬다.
 
-In the case of "Info" actions that propose a withdrawal from the Cardano
-Blockchain treasury pursuant to a previously approved budget, Constitutional
-Committee members shall record a vote on-chain that sets forth their opinion as
-to whether such proposed withdrawal, if made in accordance with such "Info"
-action, would violate this Constitution.
+이 가드레일은 카르다노 블록체인의 운영 중 발생할 수 있는 예상치 못한 문제를 방지하기 위해 설계되었다.
+이는 합리적인 매개변수 설정을 선택하는 데 지침을 제공하며, 
+보안, 성능, 기능, 또는 장기적인 지속 가능성과 관련된 잠재적인 문제를 방지하는 데 목적이 있다.
+아래에 설명된 바와 같이, 일부 가드레일은 자동화할 수 있으며, 
+온체인 가드레일 스크립트(on-chain Guardrails Script) 또는 
+내장된 원장 규칙(built-in ledger rules)을 통해 시행된다.
 
-### Section 5
+이 가드레일은 카르다노 블록체인 레이어 1 메인넷 환경에만 적용된다.
+테스트 환경이나 카르다노 블록체인 소프트웨어를 사용하는 다른 블록체인에는 적용되지 않는다.
 
-The Constitutional Committee shall be considered to be in one of the following
-two states at all times: a state of confidence or a state of no-confidence.
-In a state of no-confidence, members of the then standing Constitutional
-Committee must be reinstated or replaced using the "Update committee/threshold"
-governance action before any other on-chain governance action, other than
-"Info" actions, may go forward.
-During a state of no-confidence, "Info" actions other than "Info" actions
-relating to budget proposals or treasury withdrawal proposals, may continue to
-be recorded on-chain.
+카르다노 블록체인의 모든 매개변수가 독립적으로 고려될 수 있는 것은 아니다.
+일부 매개변수는 다른 설정과 본질적으로 상호 작용한다.
+이미 알려진 상호 작용은 이 부록에서 다루어진다.
 
-If a member of the Constitutional Committee is not carrying out its
-responsibilities as required by this Constitution, as so determined by a
-requisite percentage as specified by the Guardrails of SPOs and DReps, voting
-separately pursuant to an "Update Constitutional Committee/threshold and/or
-term" governance action, such member shall be removed from the Constitutional
-Committee upon the implementation of the governance action.
-Thereafter, an election shall be held as soon as practical to replace the
-member so removed.
+본 부록의 가드레일은 현재 기술적 통찰의 상태를 반영하고 있지만, 이 부록은 생동하는 문서로 취급되어야 한다.
+카르다노 블록체인의 구현 개선, 새로운 시뮬레이션, 
+또는 성능 평가 결과는 향후 이러한 가드레일에 포함된 일부 제한을 완화하거나 
+(특정 상황에서는) 강화해야 할 필요성을 가져올 수 있다.
 
-In the event of a "Motion of no confidence" governance action to remove all
-members of the Constitutional Committee at the same time, that is approved by a
-requisite percentage as specified by the Guardrails of DReps and SPOs, upon
-implementation of the governance action, the Constitutional Committee shall be
-considered to be a state of no-confidence until such time as an election has
-been held either to reinstate the existing Constitutional Committee members in
-whole or in part, or to elect new Constitutional Committee members.
+추가적인 가드레일이 필요할 수 있다. 
+예를 들어, 새로운 프로토콜 매개변수가 도입되는 경우가 이에 포함된다.
 
-### Section 6
+#### 가드레일의 개정, 추가 또는 폐지(Amending, Adding or Deprecating Guardrails)
 
-Constitutional Committee processes shall be transparent.
-The Constitutional Committee shall publish each decision.
-When voting that a governance action proposed to be executed on-chain is
-unconstitutional, the Constitutional Committee collectively, or each member of
-the Constitutional Committee casting such a vote separately, shall set forth the
-basis for its decision with reference to specific Articles of this Constitution
-or provisions of the Cardano Blockchain Guardrails Appendix that are in
-conflict with a given proposal.
-Internal deliberations among members of the Constitutional Committee, prior to
-casting votes, are not required to be publicly disclosed.
+본 부록에서 명시된 가드레일은 본 부록에 규정된 적용 가능한 투표 임계값을 
+충족하는 온체인 거버넌스 조치에 따라 수시로 개정될 수 있다.
+가드레일에 대한 개정은 새로운 가드레일을 포함하여 헌법 자체애 대한 개정으로 간주되어야 한다.
+각 가드레일은 고유한 라벨을 가진다.
+가드레일의 텍스트가 개정되는 경우, 기존 가드레일은 폐지되며 새로운 라벨이 본 부록에 사용된다.
+마찬가지로, 가드레일이 완전히 폐지되는 경우 해당 라벨은 이후 절대로 재사용되지 않는다.
+모든 경우에, 거버넌스 조치에 적용되는 가드레일은 이후 개정과 관계없이, 
+해당 거버넌스 조치가 온체인에 제출된 시점에 유효한 가드레일로 한다. 
 
-The Constitutional Committee shall operate pursuant to a code of conduct
-periodically adopted and published by the Constitutional Committee.
-The Constitutional Committee is encouraged to include ethical guidelines in its
-code of conduct.
-The Constitutional Committee shall periodically adopt and publish such policies
-and procedures as the Constitutional Committee shall deem necessary in carrying
-out its duties.
+#### 용어 및 지침(Terminology and Guidance)
 
-### Section 7
+**Should/Should not.** 본 부록에서 특정 값이 "Should not"으로 명시된 경우, 
+이는 해당 가드레일이 권장사항 또는 지침임을 의미하며, 특정 값은 카르다노 커뮤니티가 인정하는 적절한 전문가 그룹의
+카르다노 블록체인 거버넌스 시스템 또는 카르다노 블록체인의 운영에 대한 경험을 바탕으로 논의되거나 변경될 여지가 있음을 나타낸다.
 
-The Cardano Community is expected to support the creation, maintenance and
-ongoing administration of tools as may be necessary and appropriate for the
-Constitutional Committee to perform its required functions.
+**Must/Must not.** 본 부록에서 특정 값이 "Must" 또는 "Must not"으로 명시된 경우, 
+이는 가드레일이 카르다노 블록체인 원장 규칙, 유형 또는 기타 내장된 메커니즘에 의해 가능한 경우 강제되는 요구 사항이며, 
+이 조건이 충족되지 않을 경우 프로토콜 실패, 보안 위반 또는 기타 바람직하지 않은 결과를 초래할 수 있다.
 
-### Section 8
+**벤치마킹(Benchmarking).** 벤치마킹은 시스템 수준의 성능을 신중하게 평가하는 과정을 의미하며, 
+예를 들어 전 세계 카르다노 블록체인 노드 네트워크에서 95%의 블록이 5초 이내에 
+확산(Diffusion)될 수 있음을 사전에 입증할 수 있도록 설계된다.
+이를 위해서는 글로벌 카르다노 블록체인 네트워크를 시뮬레이션할 수 있는 카르다노 블록체인 노드의 대규모 테스트 네트워크에서 
+특정 테스트 워크플로우를 구축하고 실행해야 할 수 있다.
 
-Constitutional Committee members may be compensated for their efforts as
-members of the Constitutional Committee.
-Constitutional Committee members shall ensure that any compensation received in
-connection with their activities as a member is disclosed.
-Budgets approved for the Cardano Blockchain ecosystem may include allocations
-from the Cardano Blockchain treasury sufficient to compensate Constitutional
-Committee members in such amounts as may be approved from time to time by ada
-owners.
-Cardano Blockchain ecosystem budgets shall provide for periodic administrative
-costs of the Constitutional Committee in such amounts as requested from time to
-time by the Constitutional Committee and as approved by ada owners.
+**성능 분석(Performance analysis).** 성능 분석은 이론적 성능, 
+경험적 벤치마킹 또는 시뮬레이션 결과를 기반으로 실제 시스템 동작을 예측하는 것을 의미한다. 
+예를 들어, 통제된 테스트 환경(예: 네트워킹 속성이 알려진 데이터 센터 모음)에서 얻어진 성능 결과를 활용하여 
+실제 카르다노 블록체인 네트워크 환경에서의 성능 동작을 추론할 수 있다.
 
-### Section 9
+**시뮬레이션(Simulation).** 시뮬레이션은 반복 가능한 방식으로 
+성능 또는 기능 결정에 정보를 제공하기 위해 설계된 종합적인 실행을 의미한다. 
+예를 들어, IOSim 카르다노 블록체인 모듈은 네트워킹 스택의 작동을 통제되고 
+반복 가능한 방식으로 시뮬레이션하여 코드 배포 전에 문제를 감지할 수 있도록 한다. 
 
-Constitutional Committee members who are also acting as DReps, as SPOs, or
-both, shall publicly disclose that they are participating in on-chain
-governance actions in more than one such capacity prior to voting with respect
-to on-chain governance actions.
+**성능 모니터링(Performance Monitoring).** 성능 모니터링은 카르다노 
+블록체인 네트워크의 실제 동작을 측정하는 것을 의미한다. 
+예를 들어, 라운드트립 시간을 평가하는 타이밍 프로브나 전체 네트워크 상태를 평가하기 위해 블록을 테스트하는 등, 
+카르다노 블록체인 네트워크의 실제 동작을 측정하는 것이 포함된다.
+이는 시뮬레이션된 작업 부하나 이론적 분석으로 얻을 수 없는 
+실제 시스템 동작에 대한 정보를 제공함으로써 벤치마킹과 성능 분석을 보완한다.
 
-## ARTICLE VIII. AMENDMENT PROCESS
+**변경 사항 복원(Reverting Changes).** 
+성능 모니터링 결과 특정 변경 이후 네트워크의 실제 동작이 카르다노 블록체인의 성능 요구사항과 일치하지 않는 경우, 
+해당 변경 사항은 가능한 경우 이전 상태로 복구되어야 한다.
+예를 들어, 블록 크기가 100KB에서 120KB로 증가한 결과 95%의 블록이 5초 이내에 확산되지 않는 경우, 
+블록 크기를 100KB로 되돌리기 위한 변경이 이루어져야 한다.
+복구가 불가능한 경우, 성능 요구사항을 충족하기 위한 하나 이상의 대체 변경 사항을 적용해야 한다.
 
-### Section 1
+**중대성 수준(Severity Levels).** 카르다노 블록체인 네트워크에 영향을 미치는 문제는 
+중대성 수준에 따라 다음과 같이 분류된다:
 
-This Constitution should be treated as a living document.
-Technical advancements, changes in the desires, needs and expectations of the
-Cardano Community, and unforeseen circumstances may give rise to the need in
-the future to amend this Constitution.
-The Cardano Community is encouraged to periodically review and debate its
-provisions, and when so desired, come together in such forums as the Cardano
-Community may deem appropriate, to propose amendments to this Constitution.
-Amendments may be made as provided in this Article VIII.
+- 중대성 1(Severity 1): 카르다노 블록체인 네트워크의 보안, 성능, 기능 또는 장기적 지속 가능성에 
+매우 심각한 영향을 미치는 치명적 사건 또는 문제
 
-### Section 2
+- 중대성 2(Severity 2): 카르다노 블록체인 네트워크의 보안, 성능, 기능 또는 장기적 지속 가능성에 
+상당한 영향을 미치는 주요 사건 또는 문제
 
-Except as otherwise so provided in the Cardano Blockchain Guardrails Appendix,
-amendments to this Constitution, including to the Cardano Blockchain Guardrails
-Appendix, shall be approved by a collective decision-making process, requiring
-an on-chain governance action by owners of ada satisfying a threshold of no
-less than 65% of the then active voting stake.
+- 중대성 3(Severity 3): 카르다노 블록체인 네트워크의 보안, 성능, 기능 또는 장기적 지속 가능성에 
+미미한 영향을 미치는 경미한 사건 또는 문제
 
-### Section 3
+**향후 성능 요구 사항(Future Performance Requirements).** 
+예를 들어, 새로운 메커니즘(메모리 외부 저장소 등)이 블록 확산 시간이나 기타 성능에 영향을 미칠 수 있다.
+매개변수를 변경할 때는 현재 카르다노 블록체인의 운영뿐만 아니라 이러한 미래의 성능 요구사항도 고려해야 한다.
+개발이 완료되기 전까지는 요구사항이 보수적으로 적용되지만, 이후 실제 작동 상황을 고려하여 완화될 수 있다.
 
-If the Cardano Blockchain Guardrails Appendix sets forth an amendment threshold
-for a Guardrail that is different than the amendment threshold contained in
-Section 2 of this Article VIII, then the threshold set forth in the Cardano
-Blockchain Guardrails Appendix for such Guardrail shall apply.
+#### 자동 검사 ("가드레일 스크립트 - Guardrails Script")
 
-## APPENDIX I: CARDANO BLOCKCHAIN GUARDRAILS
+스크립트 해시는 **새 헌법 또는 가드레일 스크립트(New Constitution or Guardrails Script)** 
+거버넌스 조치가 시행될 때 헌법 해시와 연계된다.
+이는 원장 규칙과 유형에 대한 추가적인 안전장치로 작용하며, 
+규정을 준수하지 않는 거버넌스 조치를 필터링한다.
 
-### 1. Introduction
+가드레일 스크립트는 다음 두 가지 유형의 거버넌스 조치에만 영향을 미친다:
 
-To implement Cardano Blockchain on-chain governance, it is necessary to
-establish sensible Guardrails that will enable the Cardano Blockchain to
-continue to operate in a secure and sustainable way.
+- **매개변수 업데이트(Parameter Update)** 조치
 
-This Appendix sets forth Guardrails that must be applied to Cardano Blockchain
-on-chain governance actions, including changes to the protocol parameters and
-limits on treasury withdrawals.
-These Guardrails cover both essential, intrinsic limits on settings, and
-recommendations that are based on experience, measurement and governance
-objectives.
+- **재무부 인출(Treasury Withdrawal)** 조치
 
-These Guardrails are designed to avoid unexpected problems with the operation
-of the Cardano Blockchain.
-They are intended to guide the choice of sensible parameter settings and avoid
-potential problems with security, performance, functionality or long-term
-sustainability.
-As described below, some of these Guardrails are automatable and will be
-enforced via an on-chain Guardrails Script or built-in ledger rules.
+가드레일 스크립트는 위 두 유형의 거버넌스 조치가 온체인에 제출될 때 실행된다.
+이를 통해, 예를 들어 잘못된 스크립트로 인해 카르다노 블록체인이 하드 포크(Hard Fork) 
+조치를 실행하지 못하고 교착 상태에 빠지는 상황을 방지할 수 있다.
+가드레일 스크립트 적용과 관련된 세 가지 상황이 존재한다.
 
-These Guardrails apply only to the Cardano Blockchain Layer 1 mainnet
-environment.
-They are not intended to apply to test environments or to other blockchains
-that use Cardano Blockchain software.
+**기호 및 설명(Symbol and Explanation)**
 
-Not all parameters for the Cardano Blockchain can be considered independently.
-Some parameters interact with other settings in an intrinsic way.
-Where known, these interactions are addressed in this Appendix.
+- (y) 가드레일 스크립트를 사용하여 가드레일을 시행할 수 있음
+- (x) 가드레일 스크립트를 사용하여 가드레일을 시행할 수 없음
+- (~ - reason) 가드레일 스크립트를 사용하여 가드레일을 시행할 수는 없으나, 향후 원장 변경으로 이를 가능하게 할 수 있음
 
-While the Guardrails in this Appendix presently reflect the current state of
-technical insight, this Appendix should be treated as a living document.
-Implementation improvements, new simulations or performance evaluation results
-for the Cardano Blockchain may allow some of the restrictions contained in
-these Guardrails to be relaxed (or, in some circumstances, require them to be
-tightened) in due course.
-
-Additional Guardrails may also be needed where, for example, new protocol
-parameters are introduced.
-
-#### Amending, Adding or Deprecating Guardrails
-
-The Guardrails set forth in this Appendix may be amended from time to time
-pursuant to an on-chain governance action that satisfies the applicable voting
-threshold as set forth in this Appendix.
-Any such amendment to any Guardrails shall require and be deemed to be an
-amendment to the Constitution itself, including any new Guardrails.
-Each Guardrail has a unique label.
-If the text of a Guardrail is amended, the existing Guardrail will be
-deprecated and a new label will be used in this Appendix.
-Similarly, if a Guardrail is completely deprecated, its label will never be
-reused in the future.
-In all cases, the Guardrails that apply to a governance action will be those in
-force at the time that the governance action is submitted on chain, regardless
-of any later amendments.
-
-#### Terminology and Guidance
-
-**Should/Should not.** Where this Appendix says that a value "should not" be
-set below or above some value, this means that the Guardrail is a
-recommendation or guideline, and the specific value could be open to discussion
-or alteration by a suitably expert group recognized by the Cardano Community in
-light of experience with the Cardano Blockchain governance system or the
-operation of the Cardano Blockchain.
-
-**Must/Must not.** Where this Appendix says that a value "must" or "must not"
-be set below or above some value, this means that the Guardrail is a requirement
-that will be enforced by Cardano Blockchain ledger rules, types or other
-built-in mechanisms where possible, and that if not followed could cause a
-protocol failure, security breach or other undesirable outcome.
-
-**Benchmarking.** Benchmarking refers to careful system level performance
-evaluation that is designed to show *a priori* that, for example, 95% of blocks
-will be diffused across a global network of Cardano Blockchain nodes within the
-required 5s time interval in all cases.
-This may require construction of specific test workflows and execution on a
-large test network of Cardano Blockchain nodes, simulating a global Cardano
-Blockchain network.
-
-**Performance analysis.** Performance analysis refers to projecting theoretical
-performance, empirical benchmarking or simulation results to predict actual
-system behavior.
-For example, performance results obtained from tests in a controlled test
-environment (such as a collection of data centers with known networking
-properties) may be extrapolated to inform likely performance behavior in a real
-Cardano Blockchain network environment.
-
-**Simulation.** Simulation refers to synthetic execution that is designed to
-inform performance/functionality decisions in a repeatable way.
-For example, the IOSim Cardano Blockchain module allows the operation of the
-networking stack to be simulated in a controlled and repeatable way, allowing
-issues to be detected before code deployment.
-
-**Performance Monitoring.** Performance monitoring involves measuring the
-actual behavior of the Cardano Blockchain network, for example, by using timing
-probes to evaluate round-trip times, or test blocks to assess overall network
-health.
-It complements benchmarking and performance analysis by providing information
-about actual system behavior that cannot be obtained using simulated workloads
-or theoretical analysis.
-
-**Reverting Changes.** Where performance monitoring shows that actual network
-behavior following a change is inconsistent with the performance requirements
-for the Cardano Blockchain, then the change must be reverted to its previous
-state if that is possible.
-For example, if the block size is increased from 100KB to 120KB and 95% of
-blocks are no longer diffused within 5s, then a change must be made to revert
-the block size to 100KB.
-If this is not possible, then one or more alternative changes must be made that
-will ensure that the performance requirements are met.
-
-**Severity Levels.** Issues that affect the Cardano Blockchain network are
-classified by severity level, where:
-
-- Severity 1 is a critical incident or issue with very high impact to the
-security, performance, functionality or long-term sustainability of the Cardano
-Blockchain network
-
-- Severity 2 is a major incident or issue with significant impact to the
-security, performance, functionality or long-term sustainability of the Cardano
-Blockchain network
-
-- Severity 3 is a minor incident or issue with low impact to the security,
-performance, functionality or long-term sustainability of the Cardano
-Blockchain network
-
-**Future Performance Requirements.** Planned development such as new mechanisms
-for out of memory storage may impact block diffusion or other times.
-When changing parameters, it is necessary to consider these future performance
-requirements as well as the current operation of the Cardano Blockchain.
-Until development is complete, the requirements will be conservative but may
-then be relaxed to account for actual timing behavior.
-
-#### Automated Checking ("Guardrails Script")
-
-A script hash is associated with the Constitution hash when a
-**New Constitution or Guardrails Script** governance action is enacted.
-It acts as an additional safeguard to the ledger rules and types, filtering
-non-compliant governance actions.
-
-The Guardrails Script only affects two types of governance actions:
-
-- **Parameter Update** actions, and
-
-- **Treasury Withdrawal** actions.
-
-The Guardrails Script is executed when either of these types of governance
-action is submitted on-chain.
-This avoids scenarios where, for example, an erroneous script could prevent the
-Cardano Blockchain from ever enacting a Hard Fork action, resulting in deadlock.
-There are three different situations that apply to Guardrail Script usage.
-
-**Symbol and Explanation**
-
-- (y) The Guardrail Script can be used to enforce the Guardrail
-- (x) The Guardrail Script cannot be used to enforce the Guardrail
-- (~ - reason) The Guardrail Script cannot be used to enforce the Guardrail for
-the reason given, but future ledger changes could enable this.
-
-Guardrails may overlap: in this case, the most restrictive set of Guardrails
-will apply.
+가드레일은 서로 중복될 수 있으며 중복되는 경우, 가장 제한적인 가드레일 세트가 적용된다.
 
 Where a parameter is not explicitly listed in this document, then the Guardrail
 Script **must not** permit any changes to the parameter.
