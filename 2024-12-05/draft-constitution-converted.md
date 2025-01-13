@@ -687,220 +687,199 @@ TFF-02 (y) *txFeeFixed*는 **10,000,000(10 에이다)**를 초과해서는 **안
 
 TFF-03 (y) *txFeeFixed*는 음수여서는 **안 된다(must not).**
 
-TFGEN-01 (x - "should") To maintain a consistent level of protection agains
-denial-of-service attacks, *txFeeFixed* and *txFeeFixed* **should** be adjusted
-whenever Plutus Execution prices are adjusted
-(executionUnitPrices[steps/memory])
+TFGEN-01 (x - "should") 서비스 거부 공격(denial-of-service attack)에 대한 일관된 
+보호 수준을 유지하기 위해, txFeeFixed 및 txFeePerByte는 
+**플루투스 실행 가격(Plutus Execution prices)** 이 조정될 때마다 조정되어야 **한다(should).**
+(executionUnitPrices[steps/memory]).
 
-TFGEN-02 (x - unquantifiable) Any changes to *txFeeFixed* or *txFeeFixed*
-**must** consider the implications of reducing the cost of a denial-of-service
-attack or increasing the maximum transaction fee so that it becomes impossible
-to construct a transaction.
+TFGEN-02 (x - unquantifiable) txFeeFixed 또는 txFeePerByte의 
+변경 사항은 서비스 거부 공격(denial-of-service attack) 비용을 낮추는 결과를 초래하거나, 
+최대 트랜잭션 수수료가 증가하여 트랜잭션을 구성할 수 없게 되는 결과를 초래할 가능성을 반드시 고려해야 **한다(must).**
 
-#### UTxO cost per byte (utxoCostPerByte)
+#### UTxO 바이트당 비용 (utxoCostPerByte)
 
-Defines the deposit (in lovelace) that is charged for each byte of storage tha
-is held in a UTxO.
-This deposit is returned when the UTxO is no longer active.
+UTxO에 저장된 각 바이트에 대해 부과되는 예치금(lovelace 단위)을 정의한다.
+이 예치금은 UTxO가 더 이상 활성 상태가 아닐 때 반환된다.
 
-- Sets a minimum threshold on ada that is held within a single UTxO
+- 단일 UTxO에 보관되는 에이다의 최소 임계값을 설정한다.
 
-- Provides protection against low-cost denial of service attack on UTxO storage.
-DoS protection decreases in line with the free node memory (proportional to
-UTxO growth)
+- 저비용 서비스 거부 공격(DoS)으로부터 UTxO 스토리지를 보호한다.
+(UTxO 증가에 따라 노드 메모리의 여유분이 줄어들수록 DoS 보호 효과가 감소한다.)
 
-- Helps reduce long-term storage costs for node users by providing an incentive
-to return UTxOs when no longer needed, or to merge UTxOs.
+- 사용되지 않는 UTxO를 반환하거나 UTxO를 병합하도록 유도함으로써 노드 사용자들의 장기적인 저장 비용을 줄이는 데 기여한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-UCPB-01 (y) *utxoCostPerByte* **must not** be lower than 3,000 (0.003 ada)
+UCPB-01 (y) *utxoCostPerByte*는  **3,000(0.003 에이다)** 보다 낮아서는 **안 된다(must not).**
 
-UCPB-02 (y) *utxoCostPerByte* **must not** exceed 6,500 (0.0065 ada)
+UCPB-02 (y) *utxoCostPerByte*는 **6,500(0.0065 에이다)** 를 초과해서는 **안 된다(must not).**
 
-UCPB-03 (y) *utxoCostPerByte* **must not** be zero
+UCPB-03 (y) *utxoCostPerByte*는 0이어서는 **안 된다(must not).**
 
-UCPB-04 (y) *utxoCostPerByte* **must not** be negative
+UCPB-04 (y) *utxoCostPerByte*는 음수여서는 **안 된다(must not).**
 
-UCPB-05a (x - "should") Changes **should** account for
+UCPB-05a (x - "should") 변경 사항은 다음을 고려해야 **한다(should):**
 
-1. The acceptable cost of attack
+1. 공격에 허용되는 비용
 
-2. The acceptable time for an attack
+2. 공격에 허용되는 시간
 
-3. The acceptable memory configuration for full node users
+3. 풀 노드 사용자에게 적합한 메모리 구성
 
-4. The sizes of UTxOs and
+4. UTxO의 크기 및
 
-5. The current total node memory usage
+5. 현재 노드 메모리의 총 사용량
 
-#### Stake address deposit (stakeAddressDeposit)
+#### 스테이크 주소 예치금(stakeAddressDeposit)
 
-Ensures that stake addresses are retired when no longer needed
+스테이크 주소가 더 이상 필요하지 않을 때 해지되도록 보장한다.
 
-- Helps reduce long-term storage costs
+- 장기적인 저장 비용을 줄이는 데 도움을 준다.
 
-- Helps limit CPU and memory costs in the ledger
+- 원장 내 CPU와 메모리 비용을 제한하는 데 기여한다.
 
-The rationale for the deposit is to incentivize that scarce memory resources
-are returned when they are no longer required.
-Reducing the number of active stake addresses also reduces processing and
-memory costs at the epoch boundary when calculating stake snapshots.
+예치금의 목적은 부족한 메모리 자원이 더 이상 필요하지 않을 때 반환되도록 유도하는 것이다.
+활성 스테이크 주소 수를 줄이면 에포크 경계에서 스테이크 스냅샷을 계산할 때 처리 및 메모리 비용도 감소한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-SAD-01 (y) *stakeAddressDeposit* **must not** be lower than 1,000,000 (1 ada)
+SAD-01 (y) *stakeAddressDeposit*는 **1,000,000(1 에이다)** 보다 낮아서는 **안 된다(must not).**
 
-SAD-02 (y) *stakeAddressDeposit* **must not** exceed 5,000,000 (5 ada)
+SAD-02 (y) *stakeAddressDeposit*는 **5,000,000(5 에이다)** 를 초과해서는 **안 된다(must not).**
 
-SAD-03 (y) *stakeAddressDeposit* **must not** be negative
+SAD-03 (y) *stakeAddressDeposit* **must not**는 음수여서는 안 된다(must not).
 
-#### Stake pool deposit (stakePoolDeposit)
+#### 스테이크풀 예치금 (stakePoolDeposit)
 
-Ensures that stake pools are retired by the stake pool operator when no longer
-needed by them
+스테이크풀이 필요하지 않을 때 스테이크풀 운영자에 의해 해지되도록 보장한다.
 
-- Helps reduce long-term storage costs
+- 장기적인 저장 비용을 줄이는 데 도움을 준다.
 
-The rationale for the deposit is to incentivize that scarce memory resources
-are returned when they are no longer required.
-Rewards and stake snapshot calculations are also impacted by the number of
-active stake pools.
+예치금의 목적은 부족한 메모리 자원이 더 이상 필요하지 않을 때 반환되도록 유도하는 것이다.
+활성 스테이크풀 수는 보상과 스테이크 스냅샷 계산에도 영향을 미친다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-SPD-01 (y) *stakePoolDeposit* **must not** be lower than 250,000,000 (250 ada)
+SPD-01 (y) *stakePoolDeposit*는 **250,000,000(250 에이다)** 보다 낮아서는 **안 된다(must not).**
 
-SPD-02 (y) *stakePoolDeposit* **must not** exceed 500,000,000 (500 ada)
+SPD-02 (y) *stakePoolDeposit*는 **500,000,000(500 에이다)** 를 초과해서는 **안 된다(must not).**
 
-SPD-03 (y) *stakePoolDeposit* **must not** be negative
+SPD-03 (y) *stakePoolDeposit*는 음수여서는 **안 된다(must not).**
 
-#### Minimum Pool Cost (minPoolCost)
+#### 최소 풀 비용 (minPoolCost)
 
-Part of the rewards mechanism
+보상 메커니즘의 일부
 
-- The minimum pool cost is transferred to the pool rewards address before any
-delegator rewards are paid
+- 최소 풀 비용은 위임자 보상이 지급되기 전에 풀 보상 주소로 전송된다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-MPC-01 (y) *minPoolCost* **must not** be negative
+MPC-01 (y) *minPoolCost*는 음수여서는 **안 된다(must not).**
 
-MPC-02 (y) *minPoolCost* **must not** exceed 500,000,000 (500 ada)
+MPC-02 (y) *minPoolCost*는 **500,000,000(500 에이다)** 를 초과해서는 **안 된다(must not).**
 
-MPC-03 (x - "should") *minPoolCost* **should** be set in line with the economic
-cost for operating a pool
+MPC-03 (x - "should") *minPoolCost*는 풀 운영 비용과 경제적으로 일치하도록 설정되어야 **한다(should).**
 
-#### Treasury Cut (treasuryCut)
+#### 재무부 분배율 (treasuryCut)
 
-Part of the rewards mechanism
+보상 메커니즘의 일부
 
-- The treasury cut portion of the monetary expansion is transferred to the
-treasury before any pool rewards are paid
+- 재무부 분배율(Treasury Cut)은 풀이 보상을 지급받기 전에 통화 팽창(monetary expansion)의 일부를 재무부로 전송한다.
 
-- Can be set in the range 0.0-1.0 (0%-100%)
+- 0.0~1.0(0%-100%) 범위로 설정 가능하다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-TC-01 (y) *treasuryCut* **must not** be lower than 0.1 (10%)
+TC-01 (y) *treasuryCut*는 **0.1(10%)** 보다 낮아서는 **안 된다(must not).**
 
-TC-02 (y) *treasuryCut* **must not** exceed 0.3 (30%)
+TC-02 (y) *treasuryCut*는 **0.3(30%)** 를 초과해서는 **안 된다(must not).**
 
-TC-03 (y) *treasuryCut* **must not** be negative
+TC-03 (y) *treasuryCut*는 음수여서는 **안 된다(must not).**
 
-TC-04 (y) *treasuryCut* **must not** exceed 1.0 (100%)
+TC-04 (y) *treasuryCut*는 **1.0(100%)** 를 초과해서는 **안 된다(must not).**
 
-TC-05 (~ - no access to change history) *treasuryCut* **must not** be changed
-more than once in any 36 epoch period (approximately 6 months)
+TC-05 (~ - no access to change history) *treasuryCut*t는 36 에포크(약 6개월) 
+기간 내에 한 번 이상 변경되어서는 **안 된다(must not).**
 
-#### Monetary Expansion Rate (monetaryExpansion)
+#### 통화 팽창률 (monetaryExpansion)
 
-Part of the rewards mechanism
+보상 메커니즘의 일부
 
-- The monetary expansion controls the amount of reserves that is used for
-rewards each epoch
+- 통화 팽창률은 각 에포크마다 보상에 사용되는 준비금의 양을 조절한다.
 
-Governs the long-term sustainability of the Cardano Blockchain
+- 카르다노 블록체인의 장기적인 지속 가능성을 관리한다.
 
-- The reserves are gradually depleted until no rewards are supplied
+- 준비금은 점진적으로 소진되어 더 이상 보상이 지급되지 않게 된다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-ME-01 (y) *monetaryExpansion* **must not** exceed 0.005
+ME-01 (y) *monetaryExpansion*는 0.005를 초과해서는 **안 된다(must not).**
 
-ME-02 (y) *monetaryExpansion* **must not** be lower than 0.001
+ME-02 (y) *monetaryExpansion*는 0.001보다 낮아서는 **안 된다(must not).**
 
-ME-03 (y) *monetaryExpansion* **must not** be negative
+ME-03 (y) *monetaryExpansion*는 음수여서는 **안 된다(must not).**
 
-ME-04 (x - "should") *monetaryExpansion* **should not** be varied by more than
-+/- 10% in any 73-epoch period (approximately 12 months)
+ME-04 (x - "should") *monetaryExpansion*는 73 에포크(약 12개월) 동안 
+±10% 이상 변경되어서는 **안 된다(should not).**
 
-ME-05 (x - "should") *monetaryExpansion* **should not** be changed more than
-once in any 36-epoch period (approximately 6 months)
+ME-05 (x - "should") *monetaryExpansion*는 36 에포크(약 6개월) 동안 
+한 번 이상 변경되어서는 **안 된다(should not).**
 
-#### Plutus Script Execution Prices (executionUnitPrices[priceSteps/priceMemory])
+#### 플루투스 스크립트 실행 가격 (executionUnitPrices[priceSteps/priceMemory])
 
-Define the fees for executing Plutus scripts
+플루투스 스크립트를 실행하는 데 필요한 수수료를 정의한다.
 
-Gives an economic return for Plutus script execution
+플루투스 스크립트 실행에 대한 경제적 보상을 제공한다.
 
-Provides security against low-cost DoS attacks
+저비용 서비스 거부 공격(DoS)으로부터 보안을 제공한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-EIUP-PS-01 (y) *executionUnitPrices[priceSteps]* **must not** exceed 2,000 /
-10,000,000
+EIUP-PS-01 (y) *executionUnitPrices[priceSteps]*는 
+2,000/10,000,000을 초과해서는 **안 된다(must not).**
 
-EIUP-PS-02 (y) *executionUnitPrices[priceSteps]* **must not** be lower than 500
-/ 10,000,000
+EIUP-PS-02 (y) *executionUnitPrices[priceSteps]*는 500/10,000,000보다 낮아서는 **안 된다(must not).**
 
-EIUP-PM-01 (y) *executionUnitPrices[priceMemory]* **must not** exceed 2,000 /
-10,000
+EIUP-PM-01 (y) *executionUnitPrices[priceMemory]*는 2,000/10,000을 초과해서는 **안 된다(must not).**
 
-EIUP-PM-02 (y) *executionUnitPrices[priceMemory]* **must not** be lower than
-400 / 10,000
+EIUP-PM-02 (y) *executionUnitPrices[priceMemory]*는 400/10,000보다 낮아서는 **안 된다(must not).**
 
-EIUP-GEN-01 (x - "similar to") The execution prices **must** be set so tha
+EIUP-GEN-01 (x - "similar to") 실행 가격은 다음을 충족하도록 설정되어야 **한다(must):**
 
-1. the cost of executing a transaction with maximum CPU steps is similar to the
-cost of a maximum sized non-script transaction and
+1. 최대 CPU 스텝으로 트랜잭션을 실행하는 비용이 최대 크기의 비스크립트(non-script) 트랜잭션 비용과 유사해야 한다.
 
-2. the cost of executing a transaction with maximum memory units is similar to
-the cost of a maximum sized non-script transaction
+2. 최대 메모리 단위로 트랜잭션을 실행하는 비용이 최대 크기의 비스크립트(non-script) 트랜잭션 비용과 유사해야 한다.
 
-EIUP-GEN-02 (x - "should") The execution prices **should** be adjusted whenever
-transaction fees are adjusted (*txFeeFixed/txFeePerByte*).
-The goal is to ensure that the processing delay is similar for "full"
-transactions, regardless of their type.
+EIUP-GEN-02 (x - "should") 실행 가격은 트랜잭션 수수료(*txFeeFixed/txFeePerByte*)가 
+조정될 때마다 조정되어야 **한다(should).**
 
-- This helps ensure that the requirements on block diffusion/propagation times
-are met.
+이는 모든 유형의 "완전한(full)" 트랜잭션에서 처리 지연이 비슷하게 유지되도록 하기 위함이다.
 
-#### Transaction fee per byte for a reference script (minFeeRefScriptCoinsPerByte)
+- 이를 통해 블록 확산/전파(diffusion/propagation) 시간 요구사항을 충족하도록 보장한다.
 
-Defines the cost for using Plutus reference scripts in lovelace
+#### 참조 스크립트의 바이트당 트랜잭션 수수료 (minFeeRefScriptCoinsPerByte)
 
-##### GUARDRAILS
+플루투스 참조 스크립트를 사용하는 데 필요한 비용(lovelace 단위)을 정의한다.
 
-MFRS-01 (y) *minFeeRefScriptCoinsPerByte* **must not** exceed 1,000 (0.001 ada)
+##### 가드레일(GUARDRAILS)
 
-- This ensures that transactions can be paid for
+MFRS-01 (y) *minFeeRefScriptCoinsPerByte*는 **1,000(0.001 에이다)** 를 초과해서는 **안 된다(must not).**
 
-MFRS-02 (y) *minFeeRefScriptCoinsPerByte* **must not** be negative
+- 이는 트랜잭션 비용을 지불할 수 있도록 보장하기 위함이다.
 
-MFRS-03 (x - "should") To maintain a consistent level of protection against
-denial-of-service attacks, *minFeeRefScriptCoinsPerByte* **should** be adjusted
-whenever Plutus Execution prices are adjusted
-(*executionUnitPrices[steps/memory]*) and whenever *txFeeFixed* is adjusted
+MFRS-02 (y) *minFeeRefScriptCoinsPerByte*는 음수여서는 **안 된다(must not).**
 
-MFRS-04 (x - unquantifiable) Any changes to *minFeeRefScriptCoinsPerByte*
-**must** consider the implications of reducing the cost of a denial-of-service
-attack or increasing the maximum transaction fee
+MFRS-03 (x - "should") 서비스 거부 공격(DoS)에 대한 일관된 수준의 보호를 유지하려면.
+*minFeeRefScriptCoinsPerByte*는 플루투스 실행 가격(executionUnitPrices[steps/memory])과 
+txFeeFixed가 조정될 때마다 조정되어야 **한다(should).**
 
-### 2.3. Network Parameters
+MFRS-04 (x - unquantifiable) *minFeeRefScriptCoinsPerByte*의 변경은 
+서비스 거부 공격의 비용을 낮추는 결과를 초래하거나 최대 트랜잭션 수수료가 증가하여
+트랜잭션을 구성할 수 없게 되는 결과를 고려해야 **한다(must).**
 
-The overall goals when managing the Cardano Blockchain network parameters are
-to:
+### 2.3. 네트워크 매개변수(Network Parameters)
+
+카르다노 블록체인 네트워크 매개변수를 관리할 때의 주요 목표는 다음과 같다:
 
 1. Match the available Cardano Blockchain Layer 1 network capacity to current or
 future traffic demands, including payment transactions, layer 1 DApps,
