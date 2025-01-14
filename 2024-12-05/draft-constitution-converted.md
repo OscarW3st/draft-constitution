@@ -585,7 +585,7 @@ PARAM-02a (y) 이 문서에 명시된 프로토콜 매개변수에 대해 검증
 PARAM-03a (y) 주요 프로토콜 매개변수(Critical protocol parameters)는 DRep 투표 외에 SPO 투표도 필요하다. 
 SPO들은 전체 활성 블록 생성 지분(active block production stake)의 
 50% 이상의 집단적 지지를 통해 **"예"**라고 투표해야 **한다(Must).**
-이 기준은 스테이크풀 투표 임계값에 대한 가드레일(Guardrails on the stake pool voting threshold)에 의해 강제된다.
+이 기준은 스테이크 풀 투표 임계값에 대한 가드레일(Guardrails on the stake pool voting threshold)에 의해 강제된다.
 
 PARAM-04a (x) 주요 프로토콜 매개변수를 변경하기 위한 오프체인 제안이 발표된 후, 
 해당하는 온체인 거버넌스 조치 제출 간에는 통상적으로 최소 3개월이 경과해야 **한다(Should)**.
@@ -749,14 +749,14 @@ SAD-02 (y) *stakeAddressDeposit*는 **5,000,000(5 에이다)** 를 초과해서�
 
 SAD-03 (y) *stakeAddressDeposit* **must not**는 음수여서는 안 된다(must not).
 
-#### 스테이크풀 예치금 (stakePoolDeposit)
+#### 스테이크 풀 예치금 (stakePoolDeposit)
 
-스테이크풀이 필요하지 않을 때 스테이크풀 운영자에 의해 해지되도록 보장한다.
+스테이크 풀이 필요하지 않을 때 스테이크 풀 운영자에 의해 해지되도록 보장한다.
 
 - 장기적인 저장 비용을 줄이는 데 도움을 준다.
 
 예치금의 목적은 부족한 메모리 자원이 더 이상 필요하지 않을 때 반환되도록 유도하는 것이다.
-활성 스테이크풀 수는 보상과 스테이크 스냅샷 계산에도 영향을 미친다.
+활성 스테이크 풀 수는 보상과 스테이크 스냅샷 계산에도 영향을 미친다.
 
 ##### 가드레일(GUARDRAILS)
 
@@ -881,122 +881,115 @@ MFRS-04 (x - unquantifiable) *minFeeRefScriptCoinsPerByte*의 변경은
 
 카르다노 블록체인 네트워크 매개변수를 관리할 때의 주요 목표는 다음과 같다:
 
-1. Match the available Cardano Blockchain Layer 1 network capacity to current or
-future traffic demands, including payment transactions, layer 1 DApps,
-sidechain management and governance needs
+1. 결제 트랜잭션, 레이어 1 DApp, 사이드체인 관리 및 거버넌스 요구를 포함하여
+카르다노 블록체인 레이어 1 네트워크 용량을 현재 또는 미래의 트래픽 수요와 맞춘다.
 
-2. Balance traffic demands for different user groups, including payment
-transactions, minters of Fungible/Non-Fungible Tokens, Plutus scripts, DeFi
-developers, Stake Pool Operators and voting transactions
+2. 결제 트랜잭션, 대체불가토큰(NFT) 발행자, 플루투스 스크립트 사용자, 디파이 개발자, 스테이크 풀 운영자, 투표 트랜잭션 포함하여
+사용자 그룹별 트래픽 수요를 균형 있게 조정한다.
 
-#### Triggers for Change
+#### 변경의 촉발 요인(Triggers for Change)
 
-Changes to network parameters may be triggered by:
+네트워크 매개변수의 변경은 다음에 의해 촉발될 수 있습니다:
 
-1. Measured changes in traffic demands over a 2-epoch period (10 days)
+1. 2 에포크(10일) 동안 측정된 트래픽 변화
 
-2. Anticipated changes in traffic demands
+2. 예상되는 트래픽 수요의 변화
 
-3. Cardano Community requests
+3. 카르다노 커뮤니티 요청
 
-#### Counter-indicators
+#### 대응 지표(Counter-indicators)
 
-Changes may need to be reversed and/or should not be enacted in the event of:
+다음 상황에서는 매개변수 변경이 철회되거나 적용되지 않아야 한다(should not):
 
-- Excessive block propagation delays
+- 블록 전파 지연이 과도할 경우
 
-- Stake pools being unable to handle traffic volume
+- 스테이크 풀이 트래픽 볼륨을 처리하지 못할 경우
 
-- Scripts being unable to complete execution
+- 스크립트가 실행을 완료하지 못할 경우
 
-#### Core Metrics
+#### 핵심 지표(Core Metrics)
 
-All decisions on parameter changes should be informed by:
+매개변수 변경 결정은 반드시 다음 지표를 기반으로 이루어져야 한다(should):
 
-- Block propagation delay profile
+- 블록 전파 지연 프로파일
 
-- Traffic volume (block size over time)
+- 트래픽 볼륨(시간 경과에 따른 블록 크기)
 
-- Script volume (size of scripts and execution units)
+- 스크립트 볼륨(스크립트 크기 및 실행 단위)
 
-- Script execution cost benchmarks
+- 스크립트 실행 비용 벤치마크
 
-- Block propagation delay/diffusion benchmarks
+- 블록 전파 지연/확산 벤치마크
 
-Detailed benchmarking results are required to confirm the effect of any changes
-on mainnet performance or behavior prior to enactment.
-The effects of different transaction mixes must be analyzed, including normal
-transactions, Plutus scripts, and governance actions.
+변경 사항이 메인넷 성능이나 동작에 미치는 영향을 확인하기 위해, 시행 전에 세부적인 벤치마킹 결과가 필요하다.
+일반 트랜잭션, 플루투스 스크립트, 거버넌스 조치를 포함한 다양한 트랜잭션 조합의 영향을 분석해야 한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-NETWORK-01 (x - "should") No individual network parameter **should** change
-more than once per two epochs
+NETWORK-01 (x - "should") 개별 네트워크 매개변수는 
+2 에포크 동안 한 번 이상 변경하지 않을 것을 **권장한다(should).**
 
-NETWORK-02 (x - "should") Only one network parameter **should** be changed per
-epoch unless they are directly correlated, e.g., per-transaction and per-block
-memory unit limits
+NETWORK-02 (x - "should") 매개변수가 직접적으로 상관관계가 있는 경우(예: 트랜잭션 및 블록 메모리 단위 제한)를 제외하고,
+에포크당 하나의 네트워크 매개변수만 변경되어야 **한다(should).**
 
-#### Changes to Specific Network Parameters
+#### 특정 네트워크 매개변수 변경(Changes to Specific Network Parameters)
 
-#### Block Size (maxBlockBodySize)
+#### 블록 크기 (maxBlockBodySize)
 
-The maximum size of a block, in Bytes.
+블록의 최대 크기를 바이트 단위로 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-MBBS-01 (y) *maxBlockBodySize* **must not** exceed 122,880 Bytes (120KB)
+MBBS-01 (y) *maxBlockBodySize*는 **122,880 바이트(120KB)** 를 초과해서는 **안 된다(must not).**
 
-MBBS-02 (y) *maxBlockBodySize* **must not** be lower than 24,576 Bytes (24KB)
+MBBS-02 (y) *maxBlockBodySize*는 **24,576 바이트(24KB)** 보다 낮아서는 **안 된다(must not).**
 
-MBBS-03a (x - "exceptional circumstances") *maxBlockBodySize* **must not** be
-decreased, other than in exceptional circumstances where there are potential
-problems with security, performance, functionality or long-term sustainability
+MBBS-03a (x - "exceptional circumstances") *maxBlockBodySize*는 보안, 성능, 기능 또는 
+장기적인 지속 가능성 문제와 같은 예외적인 상황이 아닌 경우 감소되어서는 **안 된다(must not).** 
 
-MBBS-04 (~ - no access to existing parameter values) *maxBlockBodySize*
-**must** be large enough to include at least one transaction (that is,
-*maxBlockBodySize* **must** be at least *maxTxSize*)
+MBBS-04 (~ - no access to existing parameter values) *maxBlockBodySize*는 
+최소 하나의 트랜잭션을 포함할 수 있을 만큼 충분히 커야 **한다(must).**
+즉, maxBlockBodySize는 반드시 maxTxSize 이상이어야 **한다(must).**
 
-MBBS-05 (x - "should") *maxBlockBodySize* **should** be changed by at most
-10,240 Bytes (10KB) per epoch (5 days), and preferably by 8,192 Bytes (8KB) or
-less per epoch
+MBBS-05 (x - "should") *maxBlockBodySize* **should**는 에포크(5일)당 최대 
+**10,240 바이트(10KB)** 까지만 변경되어야 **한다(should).**
+가급적 에포크당 8,192 바이트(8KB) 이하로 변경되어야 한다.
 
-MBBS-06 (x - "should") The block size **should not** induce an additional
+MBBS-06 (x - "should") 블록 크기는 추가적인 **전송 제어 프로토콜(TCP) 왕복 시간(round trip)** 을 
+유발해서는 **안 된다(should not).**
+이를 초과하는 증가는 반드시 성능 분석, 시뮬레이션, 그리고 벤치마킹에 의해 뒷받침되어야 **한다(must).**
+
+The block size **should not** induce an additional
 Transmission Control Protocol (TCP) round trip.
 Any increase beyond this must be backed by performance analysis, simulation and
 benchmarking
 
-MBBS-07 (x - "unquantifiable") The impact of any change to *maxBlockBodySize*
-**must** be confirmed by detailed benchmarking/simulation and not exceed the
-requirements of the block diffusion/propagation time budgets, as described
-below.
-Any increase to *maxBlockBodySize* must also consider future requirements for
-Plutus script execution (*maxBlockExecutionUnits[steps]*) against the total
-block diffusion target of 3s with 95% block propagation within 5s.
-The limit on maximum block size may be increased in the future if this is
-supported by benchmarking and monitoring results
+MBBS-07 (x - "unquantifiable") maxBlockBodySize 변경의 영향은 반드시 세부적인 벤치마킹/시뮬레이션에 의해 
+확인되어야 **하며(must),** 아래에 설명된 블록 확산/전파 시간 예산의 요구사항을 초과해서는 **안 된다(must not).**
+또한, maxBlockBodySize의 증가는 플루투스 스크립트 실행(maxBlockExecutionUnits[steps])에 대한 
+미래 요구사항을 고려해야 하며, 전체 블록 확산(diffusion) 목표 3초 내에서 
+블록 전파가(propagation) 95% 이상 5초 내에 이루어지는 것을 기준으로 해야 한다.
+최대 블록 크기 제한은 벤치마킹 및 모니터링 결과에 따라 향후 증가할 수 있다.
 
-#### Transaction Size (maxTxSize)
+#### 트랜잭션 크기 (maxTxSize)
 
-The maximum size of a transaction, in Bytes.
+트랜잭션의 최대 크기를 바이트 단위로 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-MTS-01 (y) *maxTxSize* **must not** exceed 32,768 Bytes (32KB)
+MTS-01 (y) *maxTxSize*는 **32,768 바이트(32KB)** 를 초과해서는 **안 된다(must not).**
 
-MTS-02 (y) *maxTxSize* **must not** be negative
+MTS-02 (y) *maxTxSize*는 음수여서는 **안 된다(must not).**
 
-MTS-03 (~ - no access to existing parameter values) *maxTxSize* **must not** be
-decreased
+MTS-03 (~ - no access to existing parameter values) *maxTxSize*는 감소되어서는 **안 된다(must not).**
 
-MTS-04 (~ - no access to existing parameter values) *maxTxSize* **must not**
-exceed *maxBlockBodySize*
+MTS-04 (~ - no access to existing parameter values) *maxTxSize*는 
+*maxBlockBodySize*를 초과해서는 **안 된다(must not).**
 
-MTS-05 (x - "should") *maxTxSize* **should not** be increased by more than
-2,560 Bytes (2.5KB) in any epoch, and preferably **should** be increased by
-2,048 Bytes (2KB) or less per epoch
+MTS-05 (x - "should") *maxTxSize*는 에포크당 2,560 바이트(2.5KB) 이상 증가해서는 **안 된다(should not).**
+가급적 에포크당 2,048 바이트(2KB) 이하로 증가해야 한다.
 
-MTS-06 (x - "should") *maxTxSize* **should not** exceed 1/4 of the block size
+MTS-06 (x - "should") *maxTxSize*는 블록 크기의 1/4을 초과해서는 **안 된다(should not).**
 
 #### Memory Unit Limits (maxBlockExecutionUnits[memory], maxTxExecutionUnits[memory])
 
@@ -1635,131 +1628,117 @@ No guardrails are imposed on **No Confidence** actions.
 **Info** actions are not enacted on-chain.
 No guardrails are imposed on **Info** actions.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-- None
+- 없음
 
-### 9. List of Protocol Parameter Groups
+### 9. 프로토콜 매개변수 그룹 목록(List of Protocol Parameter Groups)
 
-The protocol parameters are grouped by type, allowing different thresholds to
-be set for each group.
+프로토콜 매개변수는 유형별로 그룹화되어 있으며, 
+각 그룹에 대해 서로 다른 임계값을 설정할 수 있습니다.
 
-The network parameter group consists of:
+네트워크 매개변수 그룹은 다음으로 구성된다:
 
-- *maximum block body size* (*maxBlockBodySize*)
+- *최대 블록 본문 크기 * (*maxBlockBodySize*)
 
-- *maximum transaction size* (*maxTxSize*)
+- *최대 트랜잭션 크기* (*maxTxSize*)
 
-- *maximum block header size* (*maxBlockHeaderSize*)
+- *최대 블록 헤더 크기* (*maxBlockHeaderSize*)
 
-- *maximum size of a serialized asset value* (*maxValueSize*)
+- *직렬화된 자산 값의 최대 크기* (*maxValueSize*)
 
-- *maximum script execution units in a single transaction*
+- *단일 트랜잭션에서의 최대 스크립트 실행 단위*
 (maxTxExecutionUnits[steps])
 
-- *maximum script execution units in a single block*
+- *단일 블록에서의 최대 스크립트 실행 단위*
 (*maxBlockExecutionUnits[steps]*)
 
-- *maximum number of collateral inputs* (*maxCollateralInputs*)
+- *최대 담보 입력 수* (*maxCollateralInputs*)
 
-The economic parameter group consists of:
+경제 매개변수 그룹은 다음으로 구성된다:
 
-- *minimum fee coefficient* (*txFeePerByte*)
+- *최소 수수료 계수* (*txFeePerByte*)
 
-- *minimum fee constant* (*txFeeFixed*)
+- *최소 수수료 상수* (*txFeeFixed*)
 
-- *minimum fee per byte for reference scripts* (*minFeeRefScriptCoinsPerByte*)
+- *참조 스크립트의 바이트당 최소 수수료* (*minFeeRefScriptCoinsPerByte*)
 
-- *delegation key lovelace deposit* (*stakeAddressDeposit*)
+- *위임 키 러브레이스 예치금* (*stakeAddressDeposit*)
 
-- *pool registration lovelace deposit* (*stakePoolDeposit*)
+- *풀 등록 러브레이스 예치금 * (*stakePoolDeposit*)
 
-- *monetary expansion* (*monetaryExpansion*)
+- *통화 팽창률* (*monetaryExpansion*)
 
-- *treasury expansion* (*treasuryCut*)
+- *재무부 분배율* (*treasuryCut*)
 
-- *minimum fixed rewards cut for pools* (*minPoolCost*)
+- *풀에 대한 최소 고정 보상 비율* (*minPoolCost*)
 
-- *minimum lovelace deposit per byte of serialized UTxO* (*coinsPerUTxOByte*)
+- *직렬화된 UTxO의 바이트당 최소 러브레이스 예치금* (*coinsPerUTxOByte*)
 
-- *prices of Plutus execution units*
+- *플루투스 실행 단위의 가격*
 (*executionUnitPrices[priceSteps/priceMemory]*)
 
-The technical/security parameter group consists of:
+기술/보안 매개변수 그룹은 다음으로 구성된다:
 
-- *pool pledge influence* (*poolPledgeInfluence*)
+- *풀 서약 영향력* (*poolPledgeInfluence*)
 
-- *pool retirement maximum epoch* (*poolRetireMaxEpoch*)
+- *풀 해지 최대 에포크* (*poolRetireMaxEpoch*)
 
-- *desired number of pools* (*stakePoolTargetNum*)
+- *목표 풀 수* (*stakePoolTargetNum*)
 
-- *Plutus execution cost models* (*costModels*)
+- *플루투스 실행 비용 모델* (*costModels*)
 
-- *proportion of collateral needed for scripts* (*collateralPercentage*)
+- *스크립트에 필요한 담보 비율* (*collateralPercentage*)
 
-The governance parameter group consists of:
+거버넌스 매개변수 그룹은 다음으로 구성된다:
 
-- *governance voting thresholds* (*dRepVotingThresholds[...],
+- *거버넌스 투표 임계값* (*dRepVotingThresholds[...],
 poolVotingThresholds[...]*)
 
-- *governance action maximum lifetime in epochs* (*govActionLifetime*)
+- *거버넌스 조치의 최대 수명(에포크 단위)* (*govActionLifetime*)
 
-- governance action deposit* (*govActionDeposit*)
+- *거버넌스 조치 예치금* (*govActionDeposit*)
 
-- *DRep deposit amount* (*dRepDeposit*)
+- *DRep 예치금 금액* (*dRepDeposit*)
 
-- *DRep activity period in epochs* (*dRepActivity*)
+- *DRep 임기(에포크 단위)* (*dRepActivity*)
 
-- *minimal constitutional committee size* (*committeeMinSize*)
+- *헌법위원회의 최소 구성원 수* (*committeeMinSize*)
 
-- *maximum term length (in epochs) for the constitutional committee members*
+- *헌법위원회 구성원의 최대 임기(에포크 단위)*
 (*committeeMaxTermLength*)
 
-## APPENDIX II: SUPPORTING GUIDANCE
+## 부록 II: 해석 지침(SUPPORTING GUIDANCE)
 
-This Appendix II is intended to provide guidance in interpreting the
-Constitution and the Constitutional Committee shall consider this Appendix II
-as it deems relevant and useful in carrying out its constitutional duties.
+이 부록 II는 헌법을 해석하는 데 있어 지침을 제공하기 위한 것이다.
+헌법위원회는 헌법상 임무를 수행하는 과정에서 이 부록 II를 적절하고 유용하다고 판단되는 경우 고려해야 한다.
 
-### 1. Framing Notes
+### 1. 기본 개요(Framing Notes)
 
-The Cardano Blockchain was established in 2017.
-In July 2020 the Cardano Blockchain was expanded to include independent block
-validators and in September 2024 an on-chain governance system was introduced.
-This Constitution outlines the rights and responsibilities of governance actors
-in the decentralized system who represent the owners of ada, the governance
-token of the Cardano Blockchain.
-The Cardano Blockchain is presently a decentralized ecosystem of blockchain
-technology, smart contracts, and community governance.
+카르다노 블록체인은 2017년에 설립되었다.
+2020년 7월, 카르다노 블록체인에 독립적인 블록 검증자를 포함하도록 확장되었고, 
+2024년 9월에는 온체인 거버넌스 시스템이 도입되었다.
+이 헌법은 카르다노 블록체인의 거버넌스 토큰인 에이다(ada)의 소유자를 대표하는 탈중앙화 시스템 내 
+거버넌스 행위자의 권리와 책임을 개괄한다.
+현재 카르다노 블록체인은 블록체인 기술, 스마트 계약, 커뮤니티 거버넌스로 이루어진 탈중앙화 생태계이다.
 
-In approaching this Constitution, the Cardano Community recognizes that it must
-be remembered that this is not a constitution for only a blockchain but rather
-a constitution for a blockchain ecosystem – a much more ambitious endeavor.
-Accordingly, how governance actions are approved, while extremely important, is
-not the sole focus of this Constitution.
-Rather, this Constitution provides the basis and fundamental framework through
-which all participants in the Cardano Community can come together to govern
-themselves and form radically new approaches to human interaction and
-collaboration.
+카르다노 커뮤니티는 이 헌법이 단순히 블록체인을 위한 헌법이 아니라 블록체인 생태계를 위한 헌법으로, 
+훨씬 더 원대한 과업을 목표로 한다.
+거버넌스 조치가 승인되는 방식이 매우 중요하지만, 이 헌법의 유일한 초점은 아니다.
+이 헌법은 오히려 카르다노 커뮤니티의 모든 참여자가 함께 모여 
+스스로를 통치하고 인간 상호작용과 협업에 대한 근본적으로 새로운 접근 방식을 형성할 수 있는 기초와 기본적인 틀을 제공한다.
 
-By necessity, this Constitution recognizes the role of and empowers the
-Constitutional Committee, confirms the right of the Cardano Community to
-participate in collective bodies for collaboration, gives effect to on-chain
-governance, and empowers DReps to act as the voice of ada owners for on-chain
-voting.
+필요에 따라 이 헌법은 헌법위원회의 역할을 인정하고 권한을 부여하며, 
+카르다노 커뮤니티가 협업을 위한 집단에 참여할 권리를 확인하고, 온체인 거버넌스의 실행을 가능하게 하며, 
+DRep이 온체인 투표에서 에이다 소유자의 목소리를 대변하도록 권한을 부여한다.
 
-The Constitution also recognizes the necessity of safeguarding access to and
-the use of funds of the Cardano Blockchain treasury through the inclusion of
-the Cardano Blockchain Guardrails in this Constitution.
+또한 이 헌법은 카르다노 블록체인 재무부의 자금 접근과 사용을 보호할 필요성을 인식하고 있으며, 
+이를 위해 카르다노 블록체인 가드레일을 헌법에 포함한다.
 
-### 2. Other Guidance
+### 2. 기타 지침(Other Guidance)
 
-The drafters of the Constitution, together with other participants from the
-Cardano Community, have published and in the future may publish guidance for
-interpreting the Constitution, including, without limitation, a definition
-booklet that has been released contemporaneously with the on-chain ratification
-of the Constitution.
-So long as any such published guidance has been hashed to the Cardano
-Blockchain pursuant to an "Info" action, the Constitutional Committee shall not
-be precluded from considering and utilizing such guidance as it deems
-appropriate.
+헌법 초안 작성자들은 카르다노 커뮤니티의 다른 참여자들과 함께 헌법 해석 지침을 발표했으며, 
+향후에도 계속해서 발표할 예정이다. 여기에는 헌법의 온체인 비준과 동시에 공개된 
+정의 책자(definition booklet)를 포함하되 이에 국한되지 않는다.
+이러한 공개된 지침이 "정보(Info)" 조치를 통해 카르다노 블록체인에 해시화된 경우, 
+헌법위원회는 해당 지침을 적절하다고 판단되는 방식으로 고려하고 활용하는 것을 제한받지 않는다.
