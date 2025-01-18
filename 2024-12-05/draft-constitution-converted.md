@@ -584,7 +584,7 @@ PARAM-02a (y) 이 문서에 명시된 프로토콜 매개변수에 대해 검증
 
 PARAM-03a (y) 주요 프로토콜 매개변수(Critical protocol parameters)는 DRep 투표 외에 SPO 투표도 필요하다. 
 SPO들은 전체 활성 블록 생성 지분(active block production stake)의 
-50% 이상의 집단적 지지를 통해 **"예"**라고 투표해야 **한다(Must).**
+50%를 초과하는 집단적 지지를 통해 **"예"**라고 투표해야 **한다(Must).**
 이 기준은 스테이크 풀 투표 임계값에 대한 가드레일(Guardrails on the stake pool voting threshold)에 의해 강제된다.
 
 PARAM-04a (x) 주요 프로토콜 매개변수를 변경하기 위한 오프체인 제안이 발표된 후, 
@@ -608,7 +608,7 @@ PARAM-04a (x) 주요 프로토콜 매개변수를 변경하기 위한 오프체�
 
 ##### 가드레일(GUARDRAILS)
 
-PARAM-05a (y) DRep은 전체 활성 투표 지분의 50% 이상의 집단적 지지를 통해 “예”라고 투표해야 **한다(Must).** 
+PARAM-05a (y) DRep은 전체 활성 투표 지분의 50%를 초과하는 집단적 지지를 통해 “예”라고 투표해야 **한다(Must).** 
 이는 DRep 투표 임계값에 대한 가드레일(Guardrails on the DRep voting thresholds)에 의해 강제된다.
 
 PARAM-06a (x) 거버넌스 시스템에 중요한 매개변수를 변경하기 위한 오프체인 제안이 발표된 후, 
@@ -799,7 +799,7 @@ TC-03 (y) *treasuryCut*는 음수여서는 **안 된다(must not).**
 TC-04 (y) *treasuryCut*는 **1.0(100%)** 를 초과해서는 **안 된다(must not).**
 
 TC-05 (~ - no access to change history) *treasuryCut*t는 36 에포크(약 6개월) 
-기간 내에 한 번 이상 변경되어서는 **안 된다(must not).**
+기간 내에 한 번을 초과하여 변경되어서는 **안 된다(must not).**
 
 #### 통화 팽창률 (monetaryExpansion)
 
@@ -820,10 +820,10 @@ ME-02 (y) *monetaryExpansion*는 0.001보다 낮아서는 **안 된다(must not)
 ME-03 (y) *monetaryExpansion*는 음수여서는 **안 된다(must not).**
 
 ME-04 (x - "should") *monetaryExpansion*는 73 에포크(약 12개월) 동안 
-±10% 이상 변경되어서는 **안 된다(should not).**
+±10%를 초과하여 변경되어서는 **안 된다(should not).**
 
 ME-05 (x - "should") *monetaryExpansion*는 36 에포크(약 6개월) 동안 
-한 번 이상 변경되어서는 **안 된다(should not).**
+한 번을 초과하여 변경되어서는 **안 된다(should not).**
 
 #### 플루투스 스크립트 실행 가격 (executionUnitPrices[priceSteps/priceMemory])
 
@@ -927,7 +927,7 @@ MFRS-04 (x - unquantifiable) *minFeeRefScriptCoinsPerByte*의 변경은
 ##### 가드레일(GUARDRAILS)
 
 NETWORK-01 (x - "should") 개별 네트워크 매개변수는 
-2 에포크 동안 한 번 이상 변경하지 않을 것을 **권장한다(should).**
+2 에포크 동안 한 번을 초과하여 변경하지 않을 것을 **권장한다(should).**
 
 NETWORK-02 (x - "should") 매개변수가 직접적으로 상관관계가 있는 경우(예: 트랜잭션 및 블록 메모리 단위 제한)를 제외하고,
 에포크당 하나의 네트워크 매개변수만 변경되어야 **한다(should).**
@@ -986,390 +986,368 @@ MTS-03 (~ - no access to existing parameter values) *maxTxSize*는 감소되어�
 MTS-04 (~ - no access to existing parameter values) *maxTxSize*는 
 *maxBlockBodySize*를 초과해서는 **안 된다(must not).**
 
-MTS-05 (x - "should") *maxTxSize*는 에포크당 2,560 바이트(2.5KB) 이상 증가해서는 **안 된다(should not).**
+MTS-05 (x - "should") *maxTxSize*는 에포크당 2,560 바이트(2.5KB)를 초과하여 증가해서는 **안 된다(should not).**
 가급적 에포크당 2,048 바이트(2KB) 이하로 증가해야 한다.
 
 MTS-06 (x - "should") *maxTxSize*는 블록 크기의 1/4을 초과해서는 **안 된다(should not).**
 
-#### Memory Unit Limits (maxBlockExecutionUnits[memory], maxTxExecutionUnits[memory])
+#### 메모리 단위(Unit) 제한 (maxBlockExecutionUnits[memory], maxTxExecutionUnits[memory])
 
-The limit on the maximum number of memory units that can be used by Plutus
-scripts, either per-transaction or per-block.
+트랜잭션당 또는 블록당 플루투스 스크립트가 사용할 수 있는 메모리 단위의 최대치를 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-MTEU-M-01 (y) *maxTxExecutionUnits[memory]* **must not** exceed 40,000,000 units
+MTEU-M-01 (y) *maxTxExecutionUnits[memory]* 는 40,000,000 단위를 초과해서는 **안 된다(must not).**
 
-MTEU-M-02 (y) *maxTxExecutionUnits[memory]* **must not** be negative
+MTEU-M-02 (y) *maxTxExecutionUnits[memory]* 는 음수여서는 **안 된다(must not).**
 
 MTEU-M-03 (~ - no access to existing parameter values)
-*maxTxExecutionUnits[memory]* **must not** be decreased
+*maxTxExecutionUnits[memory]* 는 감소되어서는 **안 된다(must not).**
 
-MTEU-M-04 (x - "should") *maxTxExecutionUnits[memory]* **should not** be
-increased by more than 2,500,000 units in any epoch
+MTEU-M-04 (x - "should") *maxTxExecutionUnits[memory]* 는 어떤 에포크(5일)에서도
+2,500,000 단위를 초과하여 증가해서는 **안 된다(should not).**
 
-MBEU-M-01 (y) *maxBlockExecutionUnits[memory]* **must not** exceed 120,000,000
-units
+MBEU-M-01 (y) *maxBlockExecutionUnits[memory]* 는 120,000,000 단위를 초과해서는 **안 된다(must not).**
 
-MBEU-M-02 (y) *maxBlockExecutionUnits[memory]* **must not** be negative
+MBEU-M-02 (y) *maxBlockExecutionUnits[memory]* 는 음수여서는 **안 된다(must not).**
 
-MBEU-M-03 (x - "should") *maxBlockExecutionUnits[memory]* **should not** be
-changed (increased or decreased) by more than 10,000,000 units in ANY epoch
+MBEU-M-03 (x - "should") *maxBlockExecutionUnits[memory]* 는 어떤 에포크(5일)에서도 
+10,000,000 단위를 초과하여 증가하거나 감소해서는 **안 된다(should not).**
 
-MBEU-M-04a (x - unquantifiable) The impact of any change to
-*maxBlockExecutionUnits[memory]* **must** be confirmed by detailed
-benchmarking/simulation and not exceed the requirements of the block
-diffusion/propagation time budgets, as also impacted by
-*maxBlockExecutionUnits[steps]* and *maxBlockBodySize*.
-Any increase **must** also consider previously agreed future requirements for
-the total block size (*maxBlockBodySize*) measured against the total block
-diffusion target of 3s with 95% block propagation within 5s.
-Future Plutus performance improvements may allow the per-block memory limit to
-be increased, but must be balanced against the overall diffusion limits as
-specified in the previous sentence, and future requirements
+MBEU-M-04a (x - unquantifiable) *maxBlockExecutionUnits[memory]* 변경의 영향은 반드시 
+세부적인 벤치마킹/시뮬레이션을 통해 확인되어야 **하며(must)**, *maxBlockExecutionUnits[steps]* 및 
+*maxBlockBodySize*에 영향을 미치는 블록 확산/전파(diffusion/propagation) 
+시간 예산의 요구사항을 초과해서는 **안 된다(must not).**
+모든 증가는 총 **블록 확산 목표 3초**와 **블록 전파율 95%가 5초 내**에 이루어져야 한다는 요구사항을 고려해야 하며, 
+사전에 합의된 총 블록 크기(*maxBlockBodySize*)의 미래 요구사항도 고려해야 **한다(must)**.
+향후 플루투스 성능 개선이 이루어진다면 블록당 메모리 제한을 증가시킬 수 있지만, 
+이는 전반적인 확산 제한 및 미래 요구사항과 균형을 맞춰야 한다.
 
 MEU-M-01 (~ - no access to existing parameter values)
-*maxBlockExecutionUnits[memory]* **must not** be less than
-*maxTxExecutionUnits[memory]*
+*maxBlockExecutionUnits[memory]* 는 반드시 *maxTxExecutionUnits[memory]* 보다 
+작아서는 **안 된다(must not).**
 
-#### CPU Unit Limits (maxBlockExecutionUnits[steps], maxTxExecutionUnits[steps])
+#### CPU 단위(Unit) 제한 (maxBlockExecutionUnits[steps], maxTxExecutionUnits[steps])
 
-The limit on the maximum number of CPU steps that can be used by Plutus
-scripts, either per transaction or per-block.
+트랜잭션당 또는 블록당 플루투스 스크립트에서 사용할 수 있는 최대 CPU 스텝의 최대치를 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-MTEU-S-01 (y) *maxTxExecutionUnits[steps]* **must not** exceed 15,000,000,000
-(15Bn) units
+MTEU-S-01 (y) *maxTxExecutionUnits[steps]* 는 **15,000,000,000 단위(15Bn)** 를 
+초과해서는 **안 된다(must not).**
 
-MTEU-S-02 (y) *maxTxExecutionUnits[steps]* **must not** be negative
+MTEU-S-02 (y) *maxTxExecutionUnits[steps]* 는 음수여서는 **안 된다(must not).**
 
 MTEU-S-03 (~ - no access to existing parameter values)
-*maxTxExecutionUnits[steps]* **must not** be decreased
+*maxTxExecutionUnits[steps]* 는 감소되어서는 **안 된다(must not).**
 
-MTEU-S-04 (x - "should") *maxTxExecutionUnits[steps]* **should not** be
-increased by more than 500,000,000 (500M) units in any epoch (5 days)
+MTEU-S-04 (x - "should") *maxTxExecutionUnits[steps]* 는 어떤 에포크(5일)에서도
+500,000,000 단위(5억)를 초과하여 증가해서는 **안 된다(should not).**
 
-MBEU-S-01 (y) *maxBlockExecutionUnits[steps]* **must not** exceed
-40,000,000,000 (40Bn) units
+MBEU-S-01 (y) *maxBlockExecutionUnits[steps]* 는 **40,000,000,000 단위(40Bn)** 를 
+초과해서는 **안 된다(must not).**
 
-MBEU-S-02 (y) *maxBlockExecutionUnits[steps]* **must not** be negative
+MBEU-S-02 (y) *maxBlockExecutionUnits[steps]* 는 음수여서는 **안 된다(must not).**
 
-MBEU-S-03 (x - "should") *maxBlockExecutionUnits[steps]* **should not** be
-changed (increased or decreased) by more than 2,000,000,000 (2Bn) units in any
-epoch (5 days)
+MBEU-S-03 (x - "should") *maxBlockExecutionUnits[steps]* 는 어떤 에포크(5일)에서도
+2,000,000,000 단위(2Bn)를 초과하여 증가하거나 감소해서는 **안 된다(should not).**
 
-MBEU-S-04a (x - unquantifiable) The impact of the change to
-*maxBlockExecutionUnits[steps]* **must** be confirmed by detailed
-benchmarking/simulation and not exceed the requirements of the block
-diffusion/propagation time budgets, as also impacted by
-*maxBlockExecutionUnits[memory]* and *maxBlockBodySize*.
-Any increase **must** also consider previously identified future requirements
-for the total block size (*maxBlockBodySize*) measured against the total block
-diffusion target of 3s with 95% block propagation within 5s.
-Future Plutus performance improvements may allow the per-block step limit to be
-increased, but **must** be balanced against the overall diffusion limits as
-specified in the previous sentence, and future requirements
+MBEU-S-04a (x - unquantifiable) *maxBlockExecutionUnits[steps]* 의 변경은 반드시 
+세부적인 벤치마킹/시뮬레이션을 통해 확인되어야 **하며(must)**, 
+maxBlockExecutionUnits[memory] 및 maxBlockBodySize에 영향을 미치는 
+블록 확산/전파(diffusion/propagation 시간 예산의 요구사항을 초과해서는 **안 된다(must not).**
+모든 증가는 총 **블록 확산 목표 3초**와 **블록 전파율 95%가 5초 내**에 이루어져야 한다는 요구사항을 고려해야 하며, 
+사전에 합의된 총 블록 크기(*maxBlockBodySize*)의 미래 요구사항도 고려해야 **한다(must)**.
+향후 플루투스 성능 개선이 이루어진다면 블록당 CPU 스텝 제한을 증가시킬 수 있지만, 
+이는 전반적인 확산 제한 및 미래 요구사항과 균형을 맞춰야 한다.
 
 MEU-S-01 (~ - no access to existing parameter values)
-*maxBlockExecutionUnits[steps]* **must not** be less than
-*maxTxExecutionUnits[steps]*
+*maxBlockExecutionUnits[steps]* 는 반드시 *maxTxExecutionUnits[steps]* 보다 
+작아서는 **안 된다(must not).**
 
-#### Block Header Size (maxBlockHeaderSize)
+#### 블록 헤더 크기 (maxBlockHeaderSize)
 
-The size of the block header.
+블록 헤더의 크기를 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-MBHS-01 (y) *maxBlockHeaderSize* **must not** exceed 5,000 Bytes
+MBHS-01 (y) *maxBlockHeaderSize*는 5,000 바이트를 초과해서는 **안 된다(must not).**
 
-MBHS-02 (y) *maxBlockHeaderSize* **must not** be negative
+MBHS-02 (y) *maxBlockHeaderSize*는 음수여서는 **안 된다(must not).**
 
-MBHS-03 (x - "largest valid header" is subject to change) *maxBlockHeaderSize*
-**must** be large enough for the largest valid header
+MBHS-03 (x - "가장 큰 유효 헤더”는 변경될 수 있음) *maxBlockHeaderSize*는 
+반드시 가장 큰 유효 헤더(largest valid header)를 수용할 만큼 커야 **한다(must).**
 
-MBHS-04 (x - "should") *maxBlockHeaderSize* **should** only normally be
-increased if the protocol changes
+MBHS-04 (x - "should") *maxBlockHeaderSize*는 
+가급적 프로토콜 변경이 있는 경우에만 증가해야 **한다(should).**
 
-MBHS-05 (x - "should") *maxBlockHeaderSize* **should** be within TCP's initial
-congestion window (3 or 10 MTUs)
+MBHS-05 (x - "should") *maxBlockHeaderSize*는 
+TCP의 초기 혼잡 윈도우(3 또는 10 MTU) 내에 있어야 **한다(should).**
 
-### 2.4. Technical/Security Parameters
+### 2.4. 기술/보안 매개변수(Technical/Security Parameters)
 
-The overall goals when managing the technical/security parameters are:
+기술/보안 매개 변수를 관리할 때의 전반적인 목표는 다음과 같다:
 
-1. Ensure the security of the Cardano Blockchain network in terms of
-decentralization and protection against adversarial actions
+1. 탈중앙화와 공격에 대한 보호 측면에서 카르다노 블록체인 네트워크의 보안을 보장한다.
 
-2. Enable changes to the Plutus language
+2. 플루투스 언어의 변경을 가능하게 한다.
 
-#### Triggers for Change
+#### 변경의 촉발 요인(Triggers for Change)
 
-1. Changes in the number of active SPOs
+1. 활성 SPO(스테이크 풀 운영자) 수의 변화
 
-2. Changes to the Plutus language
+2. 플루투스 언어의 변경
 
-3. Security threats
+3. 보안 위협
 
-4. Cardano Community requests
+4. 카르다노 커뮤니티의 요청
 
-#### Counter-indicators
+#### 대응 지표(Counter-indicators)
 
-- Economic concerns, e.g. when changing the number of stake pools
+- 경제적 우려(예: 스테이크 풀 수 변경 시)
 
-#### Core Metrics
+#### 핵심 지표(Core Metrics)
 
-- Number of stake pools
+- 스테이크 풀의 수(Number of stake pools)
 
-- Level of decentralization
+- 탈중앙화 수준(Level of decentralization)
 
-#### Changes to Specific Technical/Security Parameters
+#### 특정 기술/보안 매개변수의 변경(Changes to Specific Technical/Security Parameters)
 
-#### Target Number of Stake Pools (stakePoolTargetNum)
+#### 목표 스테이크 풀 수(Target Number of Stake Pools, stakePoolTargetNum)
 
-Sets the target number of stake pools
+스테이크 풀의 목표 수를 설정한다.
 
-- The expected number of stake pools when the network is in the equilibrium
-state
+- 네트워크가 균형 상태에 있을 때 예상되는 스테이크풀의 수를 나타낸다.
 
-- Primarily a security parameter, ensuring decentralization by stake pool
-division/replication
+- 주로 보안 매개변수로, 스테이크풀의 분할/복제를 통해 탈중앙화를 보장한다.
 
-- Has an economic effect as well as a security effect - economic advice is also
-required when changing this parameter
+- 경제적 효과와 보안 효과를 모두 가지며, 이 매개변수를 변경할 때는 경제적 조언이 필요하다.
 
-- Large changes in this parameter will trigger mass redelegation events
+- 이 매개변수를 크게 변경하면 대규모 재위임(redelegation) 이벤트가 발생할 수 있다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-SPTN-01 (y) *stakePoolTargetNum* **must not** be lower than 250
+SPTN-01 (y) *stakePoolTargetNum*은 250 미만으로 설정되어서는 **안 된다(must not).**
 
-SPTN-02 (y) *stakePoolTargetNum* **must not** exceed 2,000
+SPTN-02 (y) *stakePoolTargetNum*은 2,000을 초과해서는 **안 된다(must not).**
 
-SPTN-03 (y) *stakePoolTargetNum* **must not** be negative
+SPTN-03 (y) *stakePoolTargetNum*은 음수여서는 **안 된다(must not).**
 
-SPTN-04 (y) *stakePoolTargetNum* **must not** be zero
+SPTN-04 (y) *stakePoolTargetNum*은 0이 되어서는 **안 된다(must not).**
 
-#### Pledge Influence Factor (poolPledgeInfluence)
+#### 서약 영향 요인 (Pledge Influence Factor, poolPledgeInfluence)
 
-Enables the pledge protection mechanism
+서약 보호 메커니즘을 활성화한다.
 
-Provides protection against Sybil attack
+Sybil 공격에 대한 보호를 제공한다.
 
-- Higher values reward pools that have more pledge and penalize pools that have
-less pledge
+- 서약 영향 요인(Pledge Influence Factor)의 값이 높을수록,
+더 많은 서약(pledge)을 가진 풀에 보상을 제공하고, 적은 서약을 가진 풀에는 불이익을 준다.
 
-Has an economic effect as well as technical effect - economic advice is also
-required
+기술적 효과뿐만 아니라 경제적 효과도 가지며, 이 매개변수를 변경할 때는 경제적 조언이 필요하다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-PPI-01 (y) *poolPledgeInfluence* **must not** be lower than 0.1
+PPI-01 (y) *poolPledgeInfluence*는 0.1 미만으로 설정되어서는 **안 된다(must not).**
 
-PPI-02 (y) *poolPledgeInfluence* **must not** exceed 1.0
+PPI-02 (y) *poolPledgeInfluence*는 1.0을 초과해서는 **안 된다(must not).**
 
-PPI-03 (y) *poolPledgeInfluence* **must not** be negative
+PPI-03 (y) *poolPledgeInfluence*는 음수여서는 **안 된다(must not).**
 
-PPI-04 (x - "should") *poolPledgeInfluence* **should not** vary by more than
-+/- 10% in any 18-epoch period (approximately 3 months)
+PPI-04 (x - "should") *poolPledgeInfluence*는 18 에포크 기간(약 3개월) 
+동안 ±10%를 초과하여 변동해서는 **안 된다(should not).**
 
-#### Pool Retirement Window (poolRetireMaxEpoch)
+#### 풀 종료 알림 기간(Pool Retirement Window, poolRetireMaxEpoch)
 
-Defines the maximum number of epochs notice that a pool can give when planning
-to retire
+스테이크 풀이 운영 종료를 계획할 경우, 종료 시점까지 남은 최대 에포크 수를 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-PRME-01 (y) *poolRetireMaxEpoch* **must not** be negative
+PRME-01 (y) *poolRetireMaxEpoch*는 음수여서는 **안 된다(must not).**
 
-PRME-02 (x - "should") *poolRetireMaxEpoch* **should not** be lower than 1
+PRME-02 (x - "should") *poolRetireMaxEpoch*는 1 미만으로 설정되어서는 **안 된다(should not).**
 
-#### Collateral Percentage (collateralPercentage)
+#### 담보 비율(Collateral Percentage, collateralPercentage)
 
-Defines how much collateral must be provided when executing a Plutus script as
-a percentage of the normal execution cost
+플루투스 스크립트를 실행할 때 담보로 제공해야 하는 금액을 정상 실행 비용의 백분율로 정의한다.
 
-- Collateral is additional to fee payments
+- 담보는 수수료 지급 외에 추가로 요구된다.
 
-- If a script fails to execute, then the collateral is lost
+- 스크립트 실행이 실패하면 담보가 손실된다.
 
-- The collateral is never lost if a script executes successfully
+- 스크립트가 성공적으로 실행되면 담보는 손실되지 않는다.
 
-Provides security against low-cost attacks by making it more expensive rather
-than less expensive to execute failed scripts
+실패한 스크립트 실행 비용을 증가시켜 저비용 공격에 대한 보안을 제공한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-CP-01 (y) *collateralPercentage* **must not** be lower than 100
+CP-01 (y) *collateralPercentage*는 100 미만으로 설정되어서는 **안 된다(must not).**
 
-CP-02 (y) *collateralPercentage* **must not** exceed 200
+CP-02 (y) *collateralPercentage*는 200을 초과해서는 **안 된다(must not).**
 
-CP-03 (y) *collateralPercentage* **must not** be negative
+CP-03 (y) *collateralPercentage*는 음수여서는 **안 된다(must not).**
 
-CP-04 (y) *collateralPercentage* **must not** be zero
+CP-04 (y) *collateralPercentage*는 0이 되어서는 **안 된다(must not).**
 
-#### Maximum number of collateral inputs (maxCollateralInputs)
+#### 담보 입력의 최대 개수(Maximum Number of Collateral Inputs, maxCollateralInputs)
 
-Defines the maximum number of inputs that can be used for collateral when
-executing a Plutus script
+플루투스 스크립트를 실행할 때 담보로 사용할 수 있는 최대 입력 수를 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-MCI-01 (y) *maxCollateralInputs* **must not** be lower than 1
+MCI-01 (y) *maxCollateralInputs*는 1 미만으로 설정되어서는 **안 된다(must not).**
 
-#### Maximum Value Size (maxValueSize)
+#### 최대 값 크기(Maximum Value Size, maxValueSize)
 
-The limit on the serialized size of the Value in each output.
+각 출력에서 값(Value)의 직렬화된 크기의 한계를 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-MVS-01 (y) *maxValueSize* **must not** exceed 12,288 Bytes (12KB)
+MVS-01 (y) *maxValueSize*는 12,288 바이트(12KB)를 초과해서는 **안 된다(must not).**
 
-MVS-02 (y) *maxValueSize* **must not** be negative
+MVS-02 (y) *maxValueSize*는 음수여서는 **안 된다(must not).**
 
-MVS-03 (~ - no access to existing parameter values) *maxValueSize* **must** be
-less than *maxTxSize*
+MVS-03 (~ - no access to existing parameter values) *maxValueSize*는 
+반드시 maxTxSize보다 작아야 **한다(must).**
 
-MVS-04 (~ - no access to existing parameter values) *maxValueSize* **must not**
-be reduced
+MVS-04 (~ - no access to existing parameter values) *maxValueSize*는 
+감소되어서는 **안 된다(must not).**
 
-MVS-05 (x - "sensible output" is subject to interpretation) *maxValueSize*
-**must** be large enough to allow sensible outputs (e.g. any existing on-chain
-output or anticipated outputs that could be produced by new ledger rules)
+MVS-05 (x - "유효한 출력"은 해석이 필요함) *maxValueSize*는 
+유효한 출력을 허용할 수 있을 만큼 충분히 커야 **한다(must).**
+(예: 기존 온체인 출력 또는 새로운 원장 규칙으로 생성될 수 있는 예상 출력)
 
-#### Plutus Cost Models (costModels)
+#### 플루투스 비용 모델(Plutus Cost Models, costModels)
 
-Define the base costs for each Plutus primitive in terms of CPU and memory unit
+CPU 및 메모리 단위를 기준으로 플루투스 기본 연산의 비용을 정의한다.
 
-A different cost model is required for each Plutus version.
-Each cost model comprises many distinct cost model values.
-Cost models are defined for each Plutus language version.
-A new language version may introduce additional cost model values or remove
-existing cost model values.
+- 각 플루투스 버전에 대해 서로 다른 비용 모델이 필요하다.
+  
+- 각 비용 모델은 여러 개의 고유한 비용 모델 값을 포함한다.
+  
+- 비용 모델은 각 플루투스 언어 버전에 대해 정의된다.
 
-##### GUARDRAILS
+- 새로운 언어 버전이 도입되면 추가적인 비용 모델 값이 포함되거나 기존 값이 제거될 수 있다.
 
-PCM-01 (x - unquantifiable) *Cost model* values **must** be set by benchmarking
-on a reference architecture
+##### 가드레일(GUARDRAILS)
 
-PCM-02 (x - primitives and language versions aren't introduced in transactions)
-The *cost model* **must** be updated if new primitives are introduced or a new
-Plutus language version is added
+PCM-01 (x - unquantifiable) *비용 모델(Cost Model)* 값은 
+반드시 기준 아키텍처에서의 벤치마킹을 통해 설정되어야 **한다(must).**
 
-PCM-03a (~ - no access to *Plutus cost model* parameters) *Cost model* values
-**should not** normally be negative.
-Negative values must be justified against the underlying cost model for the
-associated primitives
+PCM-02 (x - 기본 연산 및 언어 버전은 트랜잭션에 도입되지 않음)
+새로운 기본(primitives) 연산이 도입되거나 플루투스 언어의 새 버전이 추가되면, 
+*비용 모델(Cost Model)* 은 반드시 업데이트되어야 **한다(must).**
 
-PCM-04 (~ - no access to *Plutus cost model* parameters) A *cost model*
-**must** be supplied for each Plutus language version that the protocol supports
+PCM-03a (~ - no access to *Plutus cost model* parameters) 
+*비용 모델(Cost Model)* 값은 일반적으로 음수가 되어서는 **안 된다(should not).**
+음수 값은 관련 원시 연산에 대한 기본 비용 모델을 근거로 정당화되어야 **한다(must).**
 
-### 2.5. Governance Parameters
+PCM-04 (~ - no access to *Plutus cost model* parameters) *비용 모델(Cost Model)* 은 프로토콜이 
+지원하는 각 플루투스 언어 버전에 대해 반드시 제공되어야 **한다(must).**
 
-The overall goals when managing the governance parameters are to:
+### 2.5. 거버넌스 매개변수(Governance Parameters)
 
-1. Ensure governance stability
+거버넌스 매개변수를 관리할 때의 전반적인 목표는 다음과 같다:
 
-2. Maintain a representative form of governance
+1. 거버넌스 안정성을 보장한다.
 
-#### Triggers for Change
+2. 대표적인 거버넌스 형태를 유지한다.
 
-Changes to governance parameters may be triggered by:
+#### 변경의 촉발 요인(Triggers for Change)
 
-1. Cardano Community requests
+거버넌스 매개변수의 변경은 다음에 의해 촉발될 수 있습니다:
 
-2. Regulatory requirements
+1. 카르다노 커뮤니티의 요청
 
-3. Unexpected or unwanted governance outcomes
+2. 규제 요구사항
 
-4. Entering a state of no confidence
+3. 예기치 않거나 원하지 않는 거버넌스 결과
 
-#### Counter-indicators
+4. 불신임 상태(no confidence)로의 진입
 
-Changes may need to be reversed and/or should not be enacted in the event of:
+#### 대응 지표(Counter-indicators)
 
-- Unexpected effects on governance
+다음과 같은 경우에는 변경 사항을 되돌리거나 시행하지 않아야 한다:
 
-- Excessive Layer 1 load due to on-chain voting or excessive numbers of
-governance actions
+- 거버넌스에 대한 예기치 못한 영향
 
-#### Core Metrics
+- 온체인 투표 또는 과도한 수의 거버넌스 조치로 인한 과도한 레이어 1 부하
 
-All decisions on parameter changes should be informed by:
+#### 핵심 지표(Core Metrics)
 
-- Governance participation levels
+매개변수 변경에 대한 모든 결정은 다음 사항에 의해 영향을 받는다:
 
-- Governance behaviors and patterns
+- 거버넌스 참여 수준
 
-- Regulatory considerations
+- 거버넌스 행동과 패턴
 
-- Confidence in the governance system
+- 규제 고려사항
 
-- The effectiveness of the governance system in managing necessary change
+- 거버넌스 시스템에 대한 신뢰
 
-#### Changes to Specific Governance Parameters
+- 필요한 변화를 관리하는 데 있어 거버넌스 시스템의 효율성
 
-#### Deposit for Governance Actions (govDeposit)
+#### 특정 거버넌스 매개변수의 변경(Changes to Specific Governance Parameters)
 
-The deposit that is charged when submitting a governance action.
+#### 거버넌스 조치를 위한 예치금 (Deposit for Governance Actions, govDeposit)
 
-- Helps to limit the number of actions that are submitted
+거버넌스 조치를 제출할 때 부과되는 예치금을 정의한다.
 
-##### GUARDRAILS
+- 제출되는 조치 수를 제한하는 데 도움을 준다.
 
-GD-01 (y) *govDeposit* **must not** be negative
+##### 가드레일(GUARDRAILS)
 
-GD-02 (y) *govDeposit* **must not** be lower than 1,000,000 (1 ada)
+GD-01 (y) *govDeposit*는 음수여서는 **안 된다(must not).**
 
-GD-03a (y) *govDeposit* **must not** exceed 10,000,000,000,000 (10 million ada)
+GD-02 (y) *govDeposit*는 1,000,000 lovelace(1 ADA) 미만으로 설정되어서는 **안 된다(must not).**
 
-GD-04 (x - "should") *govDeposit* **should** be adjusted in line with fiat
-changes
+GD-03a (y) *govDeposit*는 10,000,000,000,000 lovelace(10 million ADA)를 초과해서는 **안 된다(must not).**
 
-#### Deposit for DReps (dRepDeposit)
+GD-04 (x - "should") *govDeposit*는 법정화폐 변화에 따라 조정되는 것이 **권장된다(should).**
 
-The deposit that is charged when registering a DRep.
+#### DRep 예치금 (Deposit for DReps, dRepDeposit)
 
-- Helps to limit the number of active DReps
+DRep으로 등록할 때 부과되는 예치금을 정의한다.
 
-##### GUARDRAILS
+- 활성 DRep의 수를 제한하는 데 도움을 준다.
 
-DRD-01 (y) *dRepDeposit* **must not** be negative
+##### 가드레일(GUARDRAILS)
 
-DRD-02 (y) *dRepDeposit* **must not** be lower than 1,000,000 (1 ada)
+DRD-01 (y) *dRepDeposit*는 음수여서는 **안 된다(must not).**
 
-DRD-03 (y) *dRepDeposit* **must not** exceed 100,000,000,000 (100,000 ada)
+DRD-02 (y) *dRepDeposit*는 1,000,000 lovelace(1 ADA) 미만으로 설정되어서는 **안 된다(must not).**
 
-DRD-04 (x - "should") *dRepDeposit* **should** be adjusted in line with fiat
-changes
+DRD-03 (y) *dRepDeposit*는 100,000,000,000 lovelace(100,000 ADA)를 초과해서는 **안 된다(must not).**
 
-#### DRep Activity Period (dRepActivity)
+DRD-04 (x - "should") *dRepDeposit*는 법정화폐 변화에 따라 조정되는 것이 **권장된다(should).**
 
-The period (as a whole number of epochs) after which a DRep is considered to be
-inactive for vote calculation purposes, if they do not vote on any proposal.
+#### DRep 활동 기간 (DRep Activity Period, dRepActivity)
 
-##### GUARDRAILS
+DRep이 특정 기간 동안 어떤 제안에도 투표하지 않을 경우, 
+해당 DRep을 투표 계산에서 비활성 상태로 간주하기 위한 기준 기간(에포크 단위)을 정의한다.
 
-DRA-01 (y) *dRepActivity* **must not** be lower than 13 epochs (2 months)
+##### 가드레일(GUARDRAILS)
 
-DRA-02 (y) *dRepActivity* **must not** exceed 37 epochs (6 months)
+DRA-01 (y) *dRepActivity*는 13 에포크(약 2개월) 미만으로 설정되어서는 **안 된다(must not).**
 
-DRA-03 (y) *dRepActivity* **must not** be negative
+DRA-02 (y) *dRepActivity*는 37 에포크(약 6개월)를 초과해서는 **안 된다(must not).**
 
-DRA-04 (~ - no access to existing parameter values) *dRepActivity* **must** be
-greater than *govActionLifetime*
+DRA-03 (y) *dRepActivity*는 음수여서는 **안 된다(must not).**
 
-DRA-05 (x - "should") *dRepActivity* **should** be calculated in human terms (2
-months etc)
+DRA-04 (~ - no access to existing parameter values) *dRepActivity*는 반드시 
+*govActionLifetime*보다 커야 **한다(must).**
 
-#### DRep and SPO Governance Action Thresholds (dRepVotingThresholds[...],poolVotingThresholds[...])
+DRA-05 (x - "should") *dRepActivity*는 사람이 이해할 수 있는 
+단위(예: 2개월)로 계산되는 것이 **권장된다(should).**
 
-Thresholds on the active voting stake that is required to ratify a specific
-type of governance action by either DReps or SPOs.
+#### DRep 및 SPO 거버넌스 조치 임계값 (DRep and SPO Governance Action Thresholds, dRepVotingThresholds[...], poolVotingThresholds[...])
 
-- Ensures legitimacy of the action
+DRep 또는 SPO가 특정 유형의 거버넌스 조치를 승인하기 위해 요구되는 활성 투표 지분의 임계값을 정의한다.
 
-The threshold parameters are listed below:
+- 조치의 정당성을 보장한다.
+
+임계값 매개변수는 아래와 같다:
 
 *dRepVotingThresholds*:
 
@@ -1405,117 +1383,102 @@ The threshold parameters are listed below:
 
 - *pvtPPSecurityGroup*
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-VT-GEN-01 (y) All thresholds **must** be greater than 50% and less than or
-equal to 100%
+VT-GEN-01 (y) 모든 임계값은 50%를 초과하고 100% 이하여야 **한다(must).**
 
-VT-GEN-02a (y) Economic, network and technical/security parameter thresholds
-**must** be in the range 51%-75%
+VT-GEN-02a (y) 경제, 네트워크 및 기술/보안 매개변수의 임계값은 반드시 51%-75% 범위 내여야 **한다(must).**
 
-VT-GEN-03 (y) Governance parameter thresholds **must** be in the range 75%-90%
+VT-GEN-03 (y) 거버넌스 매개변수의 임계값은 반드시 75%-90% 범위 내여야 **한다(must).**
 
-VT-HF-01 (y) **Hard fork** action thresholds **must** be in the range 51%-80%
+VT-HF-01 (y) **하드 포크(Hard fork)** 조치 임계값은 반드시 51%-80% 범위 내여야 **한다(must).**
 
-VT-CON-01 (y) **New Constitution or Guardrails Script action** thresholds
-**must** be in the range 65%-90%
+VT-CON-01 (y) **새 헌법 또는 가드레일 스크립트(New Constitution or Guardrails Script)** 
+조치의 임계값은 반드시 65%-90% 범위 내여야 **한다(must).**
 
-VT-CC-01 (y) **Update Constitutional Committee action** thresholds **must** be
-in the range 51%-90%
+VT-CC-01 (y) **헌법 위원회 수정(Update Constitutional Committee)** 조치의 임계값은 반드시 
+51%-90% 범위 내여야 **한다(must).**
 
-VT-NC-01 (y) **No confidence** action thresholds **must** be in the range
-51%-75%
+VT-NC-01 (y) **불신임(No Confidence)** 조치의 임계값은 반드시 51%-75% 범위 내여야 **한다(must).**
 
-#### Governance Action Lifetime (govActionLifetime)
+#### 거버넌스 조치의 유효 기간 (Governance Action Lifetime, govActionLifetime)
 
-The period after which a governance action will expire if it is not enacted -
-as a whole number of epochs
+거버넌스 조치가 실행되지 않을 경우 만료되기까지의 기간(정수 에포크 단위)을 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-GAL-01 (y) *govActionLifetime* **must not** be lower than 1 epoch (5 days)
+GAL-01 (y) *govActionLifetime*는 1 에포크(5일) 미만으로 설정되어서는 **안 된다(must not).**
 
-GAL-03 (x - "should") *govActionLifetime* **should not** be lower than 2 epochs
-(10 days)
+GAL-03 (x - "should") *govActionLifetime*을 2 에포크(10일) 
+미만으로 설정되는 것은 권장되지 **않는다(should not).**
 
-GAL-02 (y) *govActionLifetime* **must not** exceed 15 epochs (75 days)
+GAL-02 (y) *govActionLifetime*는 15 에포크(75일)를 초과해서는 **안 된다(must not).**
 
-GAL-04 (x - "should") *govActionLifetime* **should** be calibrated in human
-terms (eg 30 days, two weeks), to allow sufficient time for voting etc.
-to take place
+GAL-04 (x - "should") *govActionLifetime*는 충분한 투표 시간 등을 보장하기 위해 
+사람이 이해할 수 있는 단위(예: 30일, 2주)로 조정되는 것이 **권장된다(should).**
 
 GAL-05 (~ - no access to existing parameter values) *govActionLifetime*
-**must** be less than *dRepActivity*
+는 반드시 dRepActivity보다 작아야 **한다(must).**
 
-#### Maximum Constitutional Committee Term (committeeMaxTermLength)
+#### 헌법 위원회 임기의 최대 기간 (Maximum Constitutional Committee Term, committeeMaxTermLength)
 
-The limit on the maximum term length that a committee member may serve
+위원회 구성원이 수행할 수 있는 임기의 최대 길이를 제한한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-CMTL-01a (y) *committeeMaxTermLength* **must not** be zero
+CMTL-01a (y) *committeeMaxTermLength*는 0이 되어서는 **안 된다(must not).**
 
-CMTL-02a (y) *committeeMaxTermLength* **must not** be negative
+CMTL-02a (y) *committeeMaxTermLength*는 음수여서는 **안 된다(must not).**
 
-CMTL-03a (y) *committeeMaxTermLength* **must not** be lower than 18 epochs (90
-days, or approximately 3 months)
+CMTL-03a (y) *committeeMaxTermLength*는 18 에포크(90일, 약 3개월) 미만으로 설정되어서는 **안 된다(must not).**
 
-CMTL-04a (y) *committeeMaxTermLength* **must not** exceed 293 epochs
-(approximately 4 years)
+CMTL-04a (y) *committeeMaxTermLength*는 293 에포크(약 4년)를 초과해서는 **안 된다(must not).**
 
-CMTL-05a (x - "should") *committeeMaxTermLength* **should not** exceed 220
-epochs (approximately 3 years)
+CMTL-05a (x - "should") *committeeMaxTermLength*는 220 에포크(약 3년)를 
+초과하지 않는 것이 **권장된다(should not).**
 
-#### The minimum size of the Constitutional Committee (committeeMinSize)
+#### 헌법 위원회의 최소 규모 (The Minimum Size of the Constitutional Committee, committeeMinSize)
 
-The least number of members that can be included in a Constitutional Committee
-following a governance action to change the Constitutional Committee.
+거버넌스 조치를 통해 헌법 위원회를 변경한 이후 헌법 위원회에 포함될 수 있는 최소 구성원 수를 정의한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-CMS-01 (y) *committeeMinSize* **must not** be negative
+CMS-01 (y) *committeeMinSize*는 음수여서는 **안 된다(must not).**
 
-CMS-02 (y) *committeeMinSize* **must not** be lower than 3
+CMS-02 (y) *committeeMinSize*는 3 미만으로 설정되어서는 **안 된다(must not).**
 
-CMS-03 (y) *committeeMinSize* **must not** exceed 10
+CMS-03 (y) *committeeMinSize*는 10을 초과해서는 **안 된다(must not).**
 
-### 2.6. Monitoring and Reversion of Parameter Changes
+### 2.6. 매개변수 변경의 모니터링 및 복구(Monitoring and Reversion of Parameter Changes)
 
-All network parameter changes **must be** monitored carefully for no less than
-2 epochs (10 days)
+모든 네트워크 매개변수 변경 사항은 반드시 2 에포크(10일) 이상 신중하게 모니터링되어야 **한다(must be).**
 
-- Changes **must** be reverted as soon as possible if block propagation
-delays exceed 4.5s for more than 5% of blocks over any 6 hour rolling window
+- 블록 전파 지연이 6시간 이동 분석 구간(rolling window) 기준으로 블록의 5%를 초과하는 비율에서 4.5초를 넘을 경우, 
+변경 사항은 가능한 한 빨리 복구되어야 **한다(must).**
 
-All other parameter changes should be monitored
+다른 매개변수 변경 사항도 모니터링되어야 **한다(should).**
 
-- The reversion plan **should** be implemented if the overall effect on
-performance, security, functionality or long-term sustainability is
-unacceptable.
+- 성능, 보안, 기능 또는 장기적인 지속 가능성에 미치는 전반적인 영향이 수용할 수 없는 수준일 경우, 
+복구 계획을 실행해야 **한다(should).**
+
+각 매개변수 변경 사항에 대해 반드시 구체적인 복구/회복 계획이 수립되어야 **한다(must be).**
+이 계획에는 다음 사항이 포함되어야 **한다(must)**:
 
-A specific reversion/recovery plan **must be** produced for each parameter
-change.
-This plan must include:
+- 이전 상태(또는 유사한 상태)로 복구하기 위해 변경이 필요한 매개변수와 그 변경 방식
 
-- Which parameters need to change and in which ways in order to return to the
-previous state (or a similar state)
+- 심각한 장애 발생 시 네트워크를 복구하는 방법
 
-- How to recover the network in the event of disastrous failure
+이 계획은 매개변수 변경 이후 문제가 관찰될 경우 반드시 따라야 **한다(should).**
+모든 변경 사항을 복구할 수 있는 것은 아니라는 점에 유의해야 한다.
+특정 매개변수를 변경할 때는 각별한 주의를 기울여야 한다.
 
-This plan **should** be followed if problems are observed following the
-parameter change.
-Note that not all changes can be reverted.
-Additional care must be taken when making changes to these parameters.
+### 2.7. 변경 불가능한 프로토콜 매개변수(Non-Updatable Protocol Parameters)
 
-### 2.7. Non-Updatable Protocol Parameters
+일부 기본 프로토콜 매개변수는 프로토콜 매개변수 업데이트(Protocol Parameter Update) 거버넌스 조치를 통해 변경할 수 없다.
+이 매개변수는 하드 포크의 일부로 새로운 제네시스 파일(Genesis file)에서만 변경 가능하다.
+이러한 매개변수의 변경에 대한 구체적인 가드레일을 제공할 필요는 없다.
 
-Some fundamental protocol parameters cannot be changed by the Protocol
-Parameter Update governance action.
-These parameters can only be changed in a new Genesis file as part of a hard
-fork.
-It is not necessary to provide specific guardrails on updating these parameters.
-
-### 3. Guardrails and Guidelines on Treasury Withdrawal Actions
+### 3. 카르다노 재무부 인출 조치에 대한 가드레일 및 지침(Guardrails and Guidelines on Treasury Withdrawal Actions)
 
 **Treasury withdrawal** actions specify the destination and amount of a number
 of withdrawals from the Cardano treasury.
@@ -1663,9 +1626,9 @@ No guardrails are imposed on **Info** actions.
 
 - *참조 스크립트의 바이트당 최소 수수료* (*minFeeRefScriptCoinsPerByte*)
 
-- *위임 키 러브레이스 예치금* (*stakeAddressDeposit*)
+- *위임 키 lovelace 예치금* (*stakeAddressDeposit*)
 
-- *풀 등록 러브레이스 예치금 * (*stakePoolDeposit*)
+- *풀 등록 lovelace 예치금 * (*stakePoolDeposit*)
 
 - *통화 팽창률* (*monetaryExpansion*)
 
@@ -1673,7 +1636,7 @@ No guardrails are imposed on **Info** actions.
 
 - *풀에 대한 최소 고정 보상 비율* (*minPoolCost*)
 
-- *직렬화된 UTxO의 바이트당 최소 러브레이스 예치금* (*coinsPerUTxOByte*)
+- *직렬화된 UTxO의 바이트당 최소 lovelace 예치금* (*coinsPerUTxOByte*)
 
 - *플루투스 실행 단위의 가격*
 (*executionUnitPrices[priceSteps/priceMemory]*)
