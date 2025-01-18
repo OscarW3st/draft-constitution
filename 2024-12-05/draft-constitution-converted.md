@@ -1480,116 +1480,99 @@ CMS-03 (y) *committeeMinSize*는 10을 초과해서는 **안 된다(must not).**
 
 ### 3. 카르다노 재무부 인출 조치에 대한 가드레일 및 지침(Guardrails and Guidelines on Treasury Withdrawal Actions)
 
-**Treasury withdrawal** actions specify the destination and amount of a number
-of withdrawals from the Cardano treasury.
+재무부 인출 작업은 카르다노 재무부에서 실행되는 여러 인출의 사용처와 금액을 지정한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-TREASURY-01a (x) A net change limit for the Cardano treasury's balance per
-period of time **must** be agreed by the DReps via an on-chain governance
-action with a threshold of greater than 50% of the active voting stake
+TREASURY-01a (x) 카르다노 재무부 잔액에 대한 일정 기간 동안의 순변화 한도(net change limit)는 
+활성 투표 지분의 50%를 초과하는 임계값으로 DRep이 온체인 거버넌스 조치를 통해 합의해야 **한다(must).**
 
-TREASURY-02a (x) Withdrawals from the Cardano Blockchain treasury made pursuant
-to an approved Cardano Blockchain ecosystem budget **must not** exceed the net
-change limit for the Cardano Treasury's balance per period of time
+TREASURY-02a (x) 승인된 카르다노 블록체인 생태계 예산에 따라 수행된 
+카르다노 블록체인 재무부에서 인출하는 금액은 카르다노 재무부의 잔액에 대한 기간별 순변화 한도(net change limit)를 
+초과해서는 **안 된다(must not).**
 
-TREASURY-03a (x) Withdrawals from the Cardano Blockchain treasury **must** be
-denominated in ada
+TREASURY-03a (x) 카르다노 블록체인 재무부 출금은 반드시 ADA로 표시되어야 **한다(must).**
 
-TREASURY-04a (x) Withdrawals from the Cardano Blockchain treasury **must not**
-be ratified until there is a Cardano Community approved Cardano Blockchain
-ecosystem budget then in effect pursuant to a previous on-chain governance
-action agreed by the DReps with a threshold of greater than 50% of the active
-voting stake
+TREASURY-04a (x) 카르다노 블록체인 재무부 출금은, 카르다노 커뮤니티가 승인한 블록체인 생태계 예산이 
+활성 투표 지분의 50%를 초과하는 임계값으로 
+DRep에 의해 이전 온체인 거버넌스 조치를 통해 승인되고 시행되기 전까지 비준될 수 **없다(must not).**
 
-### 4. Guardrails and Guidelines on Hard Fork Initiation Actions
+### 4. 하드포크 개시 조치에 대한 가드레일 및 지침(Guardrails and Guidelines on Hard Fork Initiation Actions)
 
-The **hard fork initiation** action requires both a new major and a new minor
-protocol version to be specified.
+**하드포크 개시(hard fork initiation**) 조치에는 새로운 주요 프로토콜 버전과 부프로토콜 버전을 지정해야 한다.
 
-- As positive integers
+- 두 버전 모두 양의 정수로 지정해야 한다.
 
-As the result of a hard fork, new updatable protocol parameters may be
-introduced.
-Guardrails may be defined for these parameters, which will take effect
-following the hard fork.
-Existing updatable protocol parameters may also be deprecated by the hard fork,
-in which case the guardrails become obsolete for all future changes.
+하드포크 결과로 새로운 업데이트 가능한 프로토콜 매개변수가 도입될 수 있다.
+이러한 매개변수에 대해 정의된 가드레일은 하드포크 이후에 적용된다.
+기존의 업데이트 가능한 프로토콜 매개변수는 하드포크로 인해 더 이상 사용되지 않을 수도 있으며, 
+이 경우 해당 가드레일은 모든 미래 변경 사항에 대해 더 이상 유효하지 않게 된다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-HARDFORK-01 (~ - no access to existing parameter values) The major protocol
-version **must** be the same as or one greater than the major version that will
-be enacted immediately prior to this change.
-If the major protocol version is one greater, then the minor protocol version
-**must** be zero
+HARDFORK-01 (~ - no access to existing parameter values) 주요 프로토콜 버전은 반드시 
+현재 변경이 적용되기 직전의 주요 버전과 같거나 그보다 하나 더 커야 **한다(must).**
+만약 주요 프로토콜 버전이 하나 더 커진 경우, 부프로토콜 버전은 반드시 0이어야 **한다(must).**
 
-HARDFORK-02a (~ - no access to existing parameter values) Unless the major
-protocol version is also changed, the minor protocol version **must** be
-greater than the minor version that will be enacted immediately prior to this
-change
+HARDFORK-02a (~ - no access to existing parameter values) 주요 프로토콜 버전이 변경되지 않은 경우, 
+부프로토콜 버전은 반드시 현재 변경이 적용되기 직전의 부버전보다 커야 **한다(must).**
 
-HARDFORK-03 (~ - no access to existing parameter values) At least one of the
-protocol versions (major or minor or both) **must** change
+HARDFORK-03 (~ - no access to existing parameter values) 프로토콜 버전(주요 또는 부버전 중 하나 이상)은 
+반드시 변경되어야 **한다(must).**
 
-HARDFORK-04a (x) At least 85% of stake pools by active stake **should** have
-upgraded to a Cardano Blockchain node version that is capable of processing the
-rules associated with the new protocol version
+HARDFORK-04a (x) 활성 스테이크의 85% 이상을 담당하는 스테이크 풀이 
+새로운 프로토콜 규칙을 처리할 수 있는 카르다노 노드 버전으로 업그레이드되어야 **한다(should).**
 
-HARDFORK-05 (x) Any new updatable protocol parameters that are introduced with
-a hard fork **must** be included in this Appendix and suitable guardrails
-defined for those parameters
+HARDFORK-05 (x) 하드포크를 통해 도입된 모든 새로운 업데이트 가능한 프로토콜 매개변수는 
+반드시 이 부록에 포함되고, 해당 매개변수를 위한 적절한 가드레일이 정의되어야 **한다(must).**
 
-HARDFORK-06 (x) Settings for any new protocol parameters that are introduced
-with a hard fork **must** be included in the appropriate Genesis file
+HARDFORK-06 (x) 하드포크를 통해 도입된 모든 새로운 프로토콜 매개변수의 설정 값은 
+반드시 적절한 제네시스 파일(Genesis file)에 포함되어야 **한다(must).**
 
-HARDFORK-07 (x) Any deprecated protocol parameters **must** be indicated in
-this Appendix
+HARDFORK-07 (x) 하드포크로 더 이상 사용되지 않게 된 모든 프로토콜 매개변수는 
+반드시 이 부록에 명시되어야 **한다(must).**
 
-HARDFORK-08 (~ - no access to *Plutus cost model* parameters) New Plutus
-versions **must** be supported by a version-specific *Plutus cost model* that
-covers each primitive that is available in the new Plutus version
+HARDFORK-08 (~ - no access to *Plutus cost model* parameters) 
+새로운 Plutus 버전은 반드시 버전별 *플루투스 비용 모델(Plutus cost model)* 이 지원되어야 **한다(must).** 
+이 모델은 새로운 플루투스 버전에서 사용할 수 있는 각 기본(primitive) 요소를 포함한다.
 
-### 5. Guardrails and Guidelines on Update Constitutional Committee or Threshold Actions
+### 5. 헌법 위원회 또는 임계값 업데이트 조치에 대한 가드레일 및 지침(Guardrails and Guidelines on Update Constitutional Committee or Threshold Actions)
 
-**Update Constitutional Committee or Threshold** governance actions may change
-the size, composition or required voting thresholds for the Constitutional
-Committee.
+**헌법 위원회 또는 임계값 업데이트(Update Constitutional Committee or Threshold)** 
+거버넌스 조치는 헌법 위원회의 크기, 구성, 또는 필요한 투표 임계값을 변경할 수 있다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-UPDATE-CC-01a (x) **Update Constitutional Committee and/or threshold** **and/or
-term** governance actions **must not** be ratified until ada holders have
-ratified through an on-chain governance action this Constitution
+UPDATE-CC-01a (x) **헌법 위원회 및/또는 임계값 및/또는 임기(Update Constitutional Committee and/or threshold** 
+**and/or term)** 와 관련된 업데이트 거버넌스 조치는,
+에이다 보유자들이 온체인 거버넌스 조치를 통해 이 헌법을 비준할 때까지 비준될 수 **없다(must not).**
 
-### 6. Guardrails and Guidelines on New Constitution or Guardrails Script Actions
+### 6. 새로운 헌법 또는 가드레일 스크립트 조치에 대한 가드레일 및 지침(Guardrails and Guidelines on New Constitution or Guardrails Script Actions)
 
-New constitution or Guardrails Script actions change the hash of the on-chain
-Constitution and the associated Guardrails Script.
+**새로운 헌법(New Constitution)** 또는 **가드레일 스크립트(Guardrails Script)** 조치는 
+온체인 헌법의 해시와 관련된 가드레일 스크립트를 변경한다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-NEW-CONSTITUTION-01a (x) A **New Constitution** **or Guardrails Script**
-governance action **must** be submitted to define any required guardrails for
-new parameters that are introduced via a Hard Fork governance action
+NEW-CONSTITUTION-01a (x) 하드포크 거버넌스 조치를 통해 도입된 새로운 매개변수에 대해 필요한 가드레일을 정의하기 위해
+**새로운 헌법(New Constitution)** 또는 **가드레일 스크립트(Guardrails Script)** 
+거버넌스 조치가 반드시 제출되어야 **한다(must).**
 
-NEW-CONSTITUTION-02 (x) If specified, the new Guardrails Script must be
-consistent with this Constitution
+NEW-CONSTITUTION-02 (x) 지정된 경우, 새로운 가드레일 스크립트는 반드시 이 헌법과 일치해야 **한다(must).**
 
-### 7. Guardrails and Guidelines on No Confidence Actions
+### 7. 불신임(No Confidence) 조치에 대한 가드레일 및 지침(Guardrails and Guidelines on No Confidence Actions)
 
-**No confidence** actions signal a state of no confidence in the governance
-system.
-No guardrails are imposed on **No Confidence** actions.
+**불신임(No Confidence)** 조치는 거버넌스 시스템에 대한 불신임 상태를 나타낸다.
+**불신임(No Confidence)** 조치에는 어떠한 가드레일도 적용되지 않는다.
 
-##### GUARDRAILS
+##### 가드레일(GUARDRAILS)
 
-- None
+- 없음
 
-### 8. GUARDRAILS AND GUIDELINES ON INFO ACTIONS
+### 8. 정보 조치(Info Actions)에 대한 가드레일 및 지침(GUARDRAILS AND GUIDELINES ON INFO ACTIONS)
 
-**Info** actions are not enacted on-chain.
-No guardrails are imposed on **Info** actions.
+**정보(Info)** 조치는 온체인에서 시행되지 않는다.
+**정보(Info)** 조치에는 어떠한 가드레일도 적용되지 않는다.
 
 ##### 가드레일(GUARDRAILS)
 
