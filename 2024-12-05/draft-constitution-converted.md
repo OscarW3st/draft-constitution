@@ -679,10 +679,10 @@ TFPB-02 (y) *txFeePerByte*는 **1,000(0.001 에이다)** 를 초과해서는 **�
 
 TFPB-03 (y) *txFeePerByte*는 음수여서는 **안 된다(must not).**
 
-TFF-01 (y) *txFeeFixed*는 **100,000(0.1 에이다)**보다 낮아서는 **안 된다(must not).**
+TFF-01 (y) *txFeeFixed*는 **100,000(0.1 에이다)** 보다 낮아서는 **안 된다(must not).**
 이 매개변수는 저비용 서비스 거부 공격을 방지하기 위함이다.
 
-TFF-02 (y) *txFeeFixed*는 **10,000,000(10 에이다)**를 초과해서는 **안 된다(must not).**
+TFF-02 (y) *txFeeFixed*는 **10,000,000(10 에이다)** 를 초과해서는 **안 된다(must not).**
 이 매개변수는 트랜잭션 비용을 지불할 수 있도록 보장하기 위함이다.
 
 TFF-03 (y) *txFeeFixed*는 음수여서는 **안 된다(must not).**
