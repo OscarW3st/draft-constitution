@@ -1,6 +1,5 @@
-Disclaimer: This version of the Cardano Constitution has been translated from the original. Only the version that matches the on-chain hash is the official Cardano Constitution.
-
-면책: 이 카르다노 헌법은 원문을 번역한 것입니다. 온체인 해시와 일치하는 버전만이 공식적인 카르다노 헌법입니다.
+- **Disclaimer:** This version of the Cardano Constitution has been translated from the original. Only the version that matches the on-chain hash is the official Cardano Constitution.
+- **면책 조항:** 이 카르다노 헌법은 원문을 번역한 것입니다. 온체인 해시와 일치하는 버전만이 공식적인 카르다노 헌법입니다.
 
 # 카르다노 블록체인 생태계 헌법
 
